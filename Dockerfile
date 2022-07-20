@@ -6,7 +6,7 @@ COPY package*.json ./
 COPY ./src/ ./src
 COPY ./public/ ./public
 COPY tsconfig.json .
-# COPY .aws/task-definition.json .aws/task-definition.json
+COPY nginx.conf /etc/nginx/nginx.conf
 
 RUN npm ci
 RUN npm install
