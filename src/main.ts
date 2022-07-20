@@ -12,7 +12,7 @@ app.get('/', (_, res) => {
 	res.sendFile(path.resolve('./public/index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
 	console.log(`Server is listening on port ${PORT}`);
 });

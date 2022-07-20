@@ -14,7 +14,7 @@ RUN npm install
 
 # Bundle app source
 COPY ./dist/* .
-COPY ./public .
+COPY ./public/* ./public
 
-EXPOSE 8080
+EXPOSE 8080 
 CMD [ "node", "main.js" ]
