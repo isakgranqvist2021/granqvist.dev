@@ -6,6 +6,7 @@ COPY package*.json ./
 COPY ./src/ ./src
 COPY ./public/ ./public
 COPY tsconfig.json .
+COPY task-definition.json .
 
 RUN npm ci
 RUN npm install
