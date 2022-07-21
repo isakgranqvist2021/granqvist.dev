@@ -1,2 +1,2 @@
 service nginx start
-npm start
+node main.js
