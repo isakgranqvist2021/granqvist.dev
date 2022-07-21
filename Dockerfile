@@ -11,8 +11,9 @@ COPY package-lock.json .
 COPY src/ src
 COPY public/ public
 COPY tsconfig.json .
-COPY .docker/nginx.conf /etc/nginx/nginx.conf
+
 COPY .docker/start.sh .
+COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
 RUN npm ci
 RUN npm install
