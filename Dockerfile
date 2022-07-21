@@ -6,7 +6,8 @@ RUN apt update -y
 RUN apt upgrade -y
 RUN apt install nginx -y
 
-COPY package*.json .
+COPY package.json .
+COPY package-lock.json .
 COPY src/ src
 COPY public/ public
 COPY tsconfig.json .
