@@ -15,6 +15,8 @@ COPY tsconfig.json .
 COPY .docker/start.sh .
 COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
+RUN ln -s /etc/nginx/nginx.conf /etc/nginx/sites-enabled/
+
 RUN npm ci
 RUN npm install
 RUN npm run build
