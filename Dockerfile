@@ -1,6 +1,10 @@
-FROM hoosin/alpine-nginx-nodejs:latest
+FROM sitespeedio/node:ubuntu-20.04-nodejs-16.16.0
 
 WORKDIR /usr/src/app
+
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install nginx -y
 
 COPY package*.json ./
 COPY ./src/ ./src
