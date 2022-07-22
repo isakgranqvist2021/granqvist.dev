@@ -1,18 +1,24 @@
-import express from 'express';
-import path from 'path';
+import express from "express";
+import path from "path";
 
 const app = express();
 
-app.disable('x-powered-by');
+app.disable("x-powered-by");
 
-app.use('/public', express.static(path.resolve('./public')));
+app.use("*", (req, _, next) => {
+  console.log(`${req.method} ${req.path}`);
 
-app.get('/', (_, res) => {
-	res.setHeader('Content-Type', 'text/html');
-	res.sendFile(path.resolve('./public/index.html'));
+  next();
+});
+
+app.use("/public", express.static(path.resolve("./public")));
+
+app.get("/", (_, res) => {
+  res.setHeader("Content-Type", "text/html");
+  res.sendFile(path.resolve("./public/index.html"));
 });
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-	console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${PORT}`);
 });
