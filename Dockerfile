@@ -28,5 +28,4 @@ RUN rm tsconfig.json
 RUN rm dist -rf
 
 EXPOSE 80
-
 CMD [ "sh", "start.sh" ]
