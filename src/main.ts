@@ -1,24 +1,26 @@
-import express from "express";
-import path from "path";
+import express from 'express'
+import path from 'path'
+import dotenv from 'dotenv'
 
-const app = express();
+const app = express()
 
-app.disable("x-powered-by");
+dotenv.config()
+app.disable('x-powered-by')
 
-app.use("*", (req, _, next) => {
-  console.log(`${req.method} ${req.path}`);
+app.use('*', (req, _, next) => {
+  console.log(`${req.method} ${req.path}`)
 
-  next();
-});
+  next()
+})
 
-app.use("/public", express.static(path.resolve("./public")));
+app.use('/public', express.static(path.resolve('./public')))
 
-app.get("/", (_, res) => {
-  res.setHeader("Content-Type", "text/html");
-  res.sendFile(path.resolve("./public/index.html"));
-});
+app.get('/', (_, res) => {
+  res.setHeader('Content-Type', 'text/html')
+  res.sendFile(path.resolve('./public/index.html'))
+})
 
-const PORT = process.env.PORT || 8080;
+const PORT = 80
 app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+  console.log(`Server is listening on port ${PORT}`)
+})

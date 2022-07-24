@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 RUN apt update -y
 RUN apt upgrade -y
-RUN apt install nginx -y
+# RUN apt install nginx -y
 
 COPY package.json .
 COPY package-lock.json .
@@ -12,10 +12,10 @@ COPY src/ src
 COPY public/ public
 COPY tsconfig.json .
 
-COPY .docker/start.sh .
-COPY .docker/nginx.conf /etc/nginx/nginx.conf
+# COPY .docker/start.sh .
+# COPY .docker/nginx.conf /etc/nginx/nginx.conf
 
-RUN ln -s /etc/nginx/nginx.conf /etc/nginx/sites-enabled/
+# RUN ln -s /etc/nginx/nginx.conf /etc/nginx/sites-enabled/
 
 RUN npm ci
 RUN npm install
@@ -28,4 +28,4 @@ RUN rm tsconfig.json
 RUN rm dist -rf
 
 EXPOSE 80
-CMD [ "sh", "start.sh" ]
+CMD [ "node", "main.js" ]
