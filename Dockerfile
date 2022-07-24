@@ -2,6 +2,7 @@ FROM node:18-alpine3.15
 
 WORKDIR /usr/src/app
 
+COPY config/ config
 COPY package.json .
 COPY package-lock.json .
 COPY src/ src

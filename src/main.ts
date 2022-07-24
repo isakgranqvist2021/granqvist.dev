@@ -1,27 +1,21 @@
-import express from 'express'
-import path from 'path'
-import dotenv from 'dotenv'
+import 'dotenv/config';
+import express from 'express';
+import path from 'path';
+import { initHttpsServer } from './https';
+import { initHttpServer } from './http';
 
-const app = express()
+const environment = process.env.ENVIRONMENT ?? 'development';
+const app = express();
 
-dotenv.config()
-app.disable('x-powered-by')
-
-app.use('*', (req, _, next) => {
-  console.log(`${req.method} ${req.path}`)
-
-  next()
-})
-
-app.use('/public', express.static(path.resolve('./public')))
+app.use('/public', express.static(path.resolve('./public')));
 
 app.get('/', (_, res) => {
-  res.setHeader('Content-Type', 'text/html')
-  res.sendFile(path.resolve('./public/index.html'))
-})
+  res.setHeader('Content-Type', 'text/html');
+  res.sendFile(path.resolve('./public/index.html'));
+});
 
-const PORT = process.env.ENVIRONMENT === 'production' ? 80 : 8080
+if (environment === 'production') {
+  initHttpsServer(app);
+}
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`)
-})
+initHttpServer(app);
