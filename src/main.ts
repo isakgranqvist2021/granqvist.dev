@@ -12,8 +12,4 @@ app.get('/', (_, res) => {
   res.sendFile(path.resolve('./public/index.html'));
 });
 
-// if (environment === 'production') {
-//   initHttpsServer(app);
-// }
-
 initHttpServer(app);
