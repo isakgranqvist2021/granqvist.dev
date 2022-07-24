@@ -19,11 +19,22 @@
     display: flex;
     gap: 10px;
   }
+
+  @media (max-width: 540px) {
+    #nav .container {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 460px) {
+    #nav .social {
+      display: none;
+    }
+  }
 </style>
 
 <nav id="nav">
   <div class="container">
-    <a href="/">IG</a>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#skills">Skills</a></li>

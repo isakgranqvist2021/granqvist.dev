@@ -25,6 +25,22 @@
     color: #fff;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 1260px) {
+    #about .row {
+      flex-direction: column;
+    }
+
+    #about .row .column:first-of-type {
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+    #about h3 {
+      order: 3;
+    }
+  }
 </style>
 
 <section class="section-2" id="about">
