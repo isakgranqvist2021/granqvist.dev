@@ -20,7 +20,8 @@ app.get('/', (_, res) => {
   res.sendFile(path.resolve('./public/index.html'))
 })
 
-const PORT = 80
+const PORT = process.env.ENVIRONMENT === 'production' ? 80 : 8080
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)
 })
