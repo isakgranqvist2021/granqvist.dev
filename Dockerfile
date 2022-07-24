@@ -6,6 +6,7 @@ COPY package.json .
 COPY package-lock.json .
 COPY src/ src
 COPY public/ public
+COPY views/ views
 COPY tsconfig.json .
 
 RUN npm ci
