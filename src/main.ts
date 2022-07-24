@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
-import http from 'http';
 
 const app = express();
 
@@ -14,8 +13,6 @@ app.get('/', (_, res) => {
 
 const port = process.env.ENVIRONMENT === 'production' ? 80 : 8080;
 
-const server = http.createServer(app);
-
-server.listen(port, () => {
+app.listen(port, () => {
   console.log(`HTTP Server is listening on port ${port}`);
 });
