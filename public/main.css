@@ -20,7 +20,19 @@ ul {
 }
 
 a {
+  display: flex;
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
   color: rgb(189, 158, 23);
+  border: 1px solid transparent;
+}
+
+a:hover {
+  border-color: rgb(189, 158, 23);
 }
 
 .section-1,
@@ -74,12 +86,12 @@ p {
 
 .social {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .social a img {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 
 .card-grid {
