@@ -7,7 +7,7 @@ export const Footer = (props: FooterProps) => {
 	return (
 		<Styled.Footer>
 			<Styled.FooterContent>
-				<p aria-label='Copyright text'>&copy; isakgranqvist.com 2021</p>
+				<p aria-label='Copyright text'>&copy; granqvist.dev 2021</p>
 				<Styled.LinkGroup>
 					<a onClick={onPrivacyClick} aria-label='Privacy policy link'>
 						Privacy Policy

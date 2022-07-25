@@ -7,7 +7,7 @@ export const About = () => {
 		<Styled.About id='About' aria-label='About section' tabIndex={3}>
 			<Styled.AboutContainer>
 				<Styled.FlexItem>
-					<Text text='isakgranqvist.com' variant='h2' data-aos='fade-down' />
+					<Text text='granqvist.dev' variant='h2' data-aos='fade-down' />
 					<Text variant='body1' data-aos='fade-up'>
 						The primary purpose of my business is to deliver reliable, scalable,
 						and high-quality software - at affordable prices.

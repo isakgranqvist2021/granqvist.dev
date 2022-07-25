@@ -35,7 +35,7 @@ export const Contact = () => {
 					</Styled.SocialIcons>
 
 					<Styled.EmailText data-aos='fade-up'>
-						contact@isakgranqvist.com
+						contact@granqvist.dev
 					</Styled.EmailText>
 				</Styled.Social>
 			</Styled.ContactContainer>

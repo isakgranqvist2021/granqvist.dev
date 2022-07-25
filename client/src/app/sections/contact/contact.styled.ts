@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Button, Container } from 'components';
+import { Container } from 'components';
 
 const Contact = styled('div')`
 	padding: 100px 0;
@@ -21,24 +21,6 @@ const ContactContainer = styled(Container)`
 
 	@media (max-width: 600px) {
 		gap: 25px;
-	}
-`;
-
-const Form = styled('form')`
-	width: 100%;
-	margin-right: 50px;
-
-	input,
-	textarea {
-		border: 1px solid lightgray;
-	}
-
-	label {
-		color: #333;
-	}
-
-	@media (max-width: 500px) {
-		margin-right: 0;
 	}
 `;
 
@@ -118,20 +100,12 @@ const EmailText = styled('p')`
 	font-size: 1rem;
 	font-weight: 900;
 	color: #333;
-	color: rgb(207, 48, 48);
-`;
-
-const SendButton = styled(Button)`
-	display: block;
-	margin-left: auto;
 `;
 
 export const Styled = {
 	EmailText,
 	Contact,
 	ContactContainer,
-	Form,
 	Social,
-	SendButton,
 	SocialIcons,
 };
