@@ -4,8 +4,7 @@ import path from 'path';
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.use('/static', express.static(path.resolve('./public')));
+app.use(express.static(path.resolve('./public')));
 
 app.get('/', (_, res) => {
   res.setHeader('Content-Type', 'text/html');

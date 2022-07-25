@@ -1,6 +1,6 @@
 import { GetRequestOptions, PostRequestOptions } from './http.types';
 
-const serverAddr = process.env.REACT_APP_SERVER_ADDR + '/api';
+const serverAddr = 'https://granqvist.dev/api';
 
 export const GET = async (options: GetRequestOptions) => {
 	const { endpoint, signal } = options;

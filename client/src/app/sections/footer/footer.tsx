@@ -12,11 +12,6 @@ export const Footer = (props: FooterProps) => {
 					<a onClick={onPrivacyClick} aria-label='Privacy policy link'>
 						Privacy Policy
 					</a>
-					<a
-						href='https://www.allabolag.se/980107SLKD/verksamhet'
-						aria-label='Business info link'>
-						Business Info
-					</a>
 				</Styled.LinkGroup>
 			</Styled.FooterContent>
 		</Styled.Footer>
