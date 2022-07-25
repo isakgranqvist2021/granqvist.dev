@@ -37,8 +37,8 @@ a:hover {
 
 .section-1,
 .section-2 {
-  padding: 4rem;
   display: flex;
+  padding: 4rem 0;
   flex-direction: column;
   justify-content: center;
 }
