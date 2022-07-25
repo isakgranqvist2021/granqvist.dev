@@ -5,7 +5,7 @@ import path from 'path';
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use('/', express.static(path.resolve('./public')));
+app.use('/static', express.static(path.resolve('./public')));
 
 app.get('/', (_, res) => res.sendFile(path.resolve('./public/index.html')));
 
