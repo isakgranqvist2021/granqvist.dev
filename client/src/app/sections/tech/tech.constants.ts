@@ -27,8 +27,8 @@ export const GRID_ITEMS = [
 		alt: 'typescript javascript with type safety',
 	},
 	{
-		src: images['gcp'],
+		src: images['aws'],
 		backgroundSize: '20%',
-		alt: 'google cloud platform cloud service provider',
+		alt: 'Aws cloud platform cloud service provider',
 	},
 ];

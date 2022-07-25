@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-
 import { Button, Link, Text } from 'components';
 
 import { Styled } from './hero.styled';
@@ -9,12 +6,6 @@ export const Hero = () => {
 	const onClickHandler = (hash: string) => {
 		window.location.hash = hash;
 	};
-
-	useEffect(() => {
-		AOS.init({
-			duration: 2000,
-		});
-	}, []);
 
 	return (
 		<Styled.Hero id='Home' aria-label='Hero section' tabIndex={0}>

@@ -45,6 +45,9 @@ const Form = styled('form')`
 const Social = styled('div')`
 	width: 100%;
 	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	h3 {
 		font-size: 3rem;
@@ -99,7 +102,7 @@ const SocialIcons = styled('div')`
 
 	@media (max-width: 1100px) {
 		justify-content: center;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 
 	@media (max-width: 500px) {
@@ -109,12 +112,22 @@ const SocialIcons = styled('div')`
 	}
 `;
 
+const EmailText = styled('p')`
+	text-transform: lowercase;
+	margin-top: 40px;
+	font-size: 1rem;
+	font-weight: 900;
+	color: #333;
+	color: rgb(207, 48, 48);
+`;
+
 const SendButton = styled(Button)`
 	display: block;
 	margin-left: auto;
 `;
 
 export const Styled = {
+	EmailText,
 	Contact,
 	ContactContainer,
 	Form,

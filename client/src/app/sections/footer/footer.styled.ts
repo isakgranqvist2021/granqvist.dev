@@ -6,6 +6,11 @@ const Footer = styled('footer')`
 	padding: 20px 0;
 	background-color: #333;
 	border-top: 1px solid #3d3d3d;
+
+	a,
+	p {
+		line-height: 1;
+	}
 `;
 
 const FooterContent = styled(Container)`

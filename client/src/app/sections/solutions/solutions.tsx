@@ -1,17 +1,8 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-
 import { Container, Text } from 'components';
 
 import { Styled } from './solutions.styled';
 
 export const Features = () => {
-	useEffect(() => {
-		AOS.init({
-			duration: 2000,
-		});
-	}, []);
-
 	return (
 		<Styled.Features id='Solutions' aria-label='My solutions' tabIndex={1}>
 			<Container>

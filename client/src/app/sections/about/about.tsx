@@ -1,17 +1,8 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
-
 import { Text } from 'components';
 
 import { Styled } from './about.styled';
 
 export const About = () => {
-	useEffect(() => {
-		AOS.init({
-			duration: 2000,
-		});
-	}, []);
-
 	return (
 		<Styled.About id='About' aria-label='About section' tabIndex={3}>
 			<Styled.AboutContainer>
