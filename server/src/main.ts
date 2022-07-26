@@ -4,6 +4,8 @@ import path from 'path';
 
 const app = express();
 
+console.log('OK');
+
 app.use(express.static(path.resolve('./public')));
 
 app.get('/', (_, res) => {
