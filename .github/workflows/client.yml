@@ -2,20 +2,19 @@ name: Client CI
 
 on:
   push:
-    branches: ["develop", "main"]
-    paths: ["client/**"]
+    branches: ['develop', 'main']
+    paths: ['client/**']
   pull_request:
-    branches: ["develop", "main"]
-    paths: ["client/**"]
+    branches: ['develop', 'main']
+    paths: ['client/**']
 
 jobs:
   build:
-    environment: client
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: "./client/"
+        working-directory: './client/'
 
     strategy:
       matrix:
@@ -28,8 +27,8 @@ jobs:
 
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-          cache-dependency-path: "./client/package-lock.json"
+          cache: 'npm'
+          cache-dependency-path: './client/package-lock.json'
 
       - run: npm ci
       - run: CI=false npm run build
