@@ -10,6 +10,7 @@ export const Projects = () => {
 			tabIndex={2}>
 			{GRID_ITEMS.map((gridItem) => (
 				<Styled.GridItem
+					title={gridItem.alt}
 					aria-label={gridItem.alt}
 					key={gridItem.src}
 					{...gridItem}

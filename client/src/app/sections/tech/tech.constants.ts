@@ -4,31 +4,31 @@ export const GRID_ITEMS = [
 	{
 		src: images['go'],
 		backgroundSize: '60%',
-		alt: 'go programming language',
+		alt: 'Go Programming Language',
 	},
 	{
 		src: images['node'],
 		backgroundSize: '55%',
-		alt: 'nodejs javascript runtime',
+		alt: 'Node.js',
 	},
 	{
 		src: images['react'],
 		backgroundSize: '40%',
-		alt: 'react javascript library by facebook',
+		alt: 'React.js',
 	},
 	{
 		src: images['angular'],
 		backgroundSize: '30%',
-		alt: 'angular javascript framework',
+		alt: 'Angular',
 	},
 	{
 		src: images['typescript'],
 		backgroundSize: '70%',
-		alt: 'typescript javascript with type safety',
+		alt: 'TypeScript',
 	},
 	{
 		src: images['aws'],
 		backgroundSize: '20%',
-		alt: 'Aws cloud platform cloud service provider',
+		alt: 'Amazon Web Services',
 	},
 ];
