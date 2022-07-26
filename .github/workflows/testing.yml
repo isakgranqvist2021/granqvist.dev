@@ -1,20 +1,21 @@
-name: Server CI
+name: Client CI
 
 on:
   push:
     branches: ['develop', 'main']
-    paths: ['server/**']
+    paths: ['client/**']
   pull_request:
     branches: ['develop', 'main']
-    paths: ['server/**']
+    paths: ['client/**']
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: testing
 
     defaults:
       run:
-        working-directory: ./server/
+        working-directory: ./client/
 
     strategy:
       matrix:
