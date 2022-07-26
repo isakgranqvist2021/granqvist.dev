@@ -16,12 +16,10 @@ const Nav = styled('nav')`
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
-		@media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
-		}
 	}
 
 	@media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
+		height: 60px;
 		padding: 0 1rem;
 	}
 `;
@@ -48,7 +46,7 @@ const NavLinks = styled('div')<NavState>`
 		${(props) =>
 			props.open &&
 			css`
-				width: 280px;
+				width: 180px;
 
 				@media (max-width: 321px) {
 					width: 225px;
@@ -143,7 +141,7 @@ const Logo = styled('img')`
 
 	@media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
 		display: block;
-		height: 50%;
+		height: 36px;
 	}
 `;
 
@@ -156,6 +154,8 @@ const Bars = {
 		justify-content: space-between;
 
 		@media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
+			height: 28px;
+			width: 36px;
 			display: flex;
 		}
 	`,
@@ -173,6 +173,10 @@ const Bars = {
 
 		&:nth-of-type(3) {
 			transform-origin: bottom left;
+		}
+
+		@media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
+			height: 2px;
 		}
 
 		${(props) => css`

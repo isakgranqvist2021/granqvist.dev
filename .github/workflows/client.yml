@@ -11,10 +11,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: client
 
     defaults:
       run:
-        working-directory: './client/'
+        working-directory: ./client/
 
     strategy:
       matrix:
@@ -27,8 +28,8 @@ jobs:
 
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: './client/package-lock.json'
+          cache: npm
+          cache-dependency-path: ./client/package-lock.json
 
       - run: npm ci
       - run: CI=false npm run build

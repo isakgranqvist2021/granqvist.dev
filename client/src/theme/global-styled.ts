@@ -7,6 +7,22 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #f2f2f2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #bfbfbf;
+        
+        :hover {
+            background-color: #a8a8a8;
+        }
+    }
+
     body, html {
         width: 100%;
         overflow-x: hidden; 

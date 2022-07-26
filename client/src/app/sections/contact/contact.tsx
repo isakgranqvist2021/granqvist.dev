@@ -9,8 +9,8 @@ export const Contact = () => {
 				<Styled.Social aria-label='Social media icons'>
 					<Text
 						variant='h3'
+						data-aos='fade-in'
 						text='You can find me on social media'
-						data-aos='fade-left'
 					/>
 
 					<Styled.SocialIcons>
@@ -43,7 +43,9 @@ export const Contact = () => {
 						</a>
 					</Styled.SocialIcons>
 
-					<Styled.EmailText>contact@granqvist.dev</Styled.EmailText>
+					<Styled.EmailText data-aos='fade-in'>
+						contact@granqvist.dev
+					</Styled.EmailText>
 				</Styled.Social>
 			</Styled.ContactContainer>
 		</Styled.Contact>
