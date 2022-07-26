@@ -11,6 +11,4 @@ ReactDOM.render(
 	document.getElementById('root')
 );
 
-console.log('!');
-
 reportWebVitals();

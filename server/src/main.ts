@@ -13,8 +13,6 @@ app.get('/', (_, res) => {
 
 const port = process.env.ENVIRONMENT === 'production' ? 80 : 8080;
 
-console.log('!');
-
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
