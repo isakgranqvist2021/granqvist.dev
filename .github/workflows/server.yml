@@ -2,9 +2,11 @@ name: Server CI
 
 on:
   push:
-    branches: ['develop', 'main']
+    branches: ["develop", "main"]
+    paths: ["server"]
   pull_request:
-    branches: ['develop', 'main']
+    branches: ["develop", "main"]
+    paths: ["server"]
 
 jobs:
   build:
@@ -13,7 +15,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: './server/'
+        working-directory: "./server/"
 
     strategy:
       matrix:
@@ -26,8 +28,8 @@ jobs:
 
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: './server/package-lock.json'
+          cache: "npm"
+          cache-dependency-path: "./server/package-lock.json"
 
       - run: npm ci
       - run: npm run build
