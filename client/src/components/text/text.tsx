@@ -1,11 +1,15 @@
-import { TextProps } from './text.types';
+import { TextProps } from "./text.types";
 
-import { Styled } from './text.styled';
+import { Styled } from "./text.styled";
 
 export const Text = (props: TextProps) => {
-	const { variant = 'body1', color, text, children } = props;
+  const { variant = "body1", color, text, children, ...rest } = props;
 
-	const Element = Styled[variant];
+  const Element = Styled[variant];
 
-	return <Element color={color}>{text || children}</Element>;
+  return (
+    <Element color={color} {...rest}>
+      {text || children}
+    </Element>
+  );
 };
