@@ -16,6 +16,7 @@ export const Contact = () => {
 					<Styled.SocialIcons>
 						<a
 							target='_blank'
+							rel='noreferrer'
 							data-aos='fade-right'
 							aria-label='Instagram link'
 							href='https://www.instagram.com/isakgranqvist2021/'
@@ -24,6 +25,7 @@ export const Contact = () => {
 						</a>
 						<a
 							target='_blank'
+							rel='noreferrer'
 							data-aos='zoom-in'
 							aria-label='Linkedin link'
 							href='https://www.linkedin.com/in/isak-granqvist-b1217a207/'
@@ -32,6 +34,7 @@ export const Contact = () => {
 						</a>
 						<a
 							target='_blank'
+							rel='noreferrer'
 							data-aos='fade-left'
 							aria-label='Github link'
 							href='https://github.com/isakgranqvist2021'
