@@ -3,10 +3,10 @@ name: Server CI
 on:
   push:
     branches: ["develop", "main"]
-    paths: ["server"]
+    paths: ["server/**"]
   pull_request:
     branches: ["develop", "main"]
-    paths: ["server"]
+    paths: ["server/**"]
 
 jobs:
   build:
