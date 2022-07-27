@@ -46,9 +46,7 @@ export const Contact = () => {
             </a>
           </Styled.SocialIcons>
 
-          <Styled.EmailText data-aos="fade-in">
-            contact@granqvist.dev
-          </Styled.EmailText>
+          <Styled.EmailText>contact@granqvist.dev</Styled.EmailText>
         </Styled.Social>
       </Styled.ContactContainer>
     </Styled.Contact>
