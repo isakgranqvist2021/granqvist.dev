@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const body1 = styled('p')`
-	line-height: 1.7;
-	font-size: 1.1rem;
-	letter-spacing: 1.1px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  letter-spacing: 1.1px;
 
-	&:not(:last-of-type) {
-		margin-bottom: 1rem;
-	}
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const body2 = styled('p')``;

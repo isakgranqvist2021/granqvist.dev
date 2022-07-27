@@ -1,17 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/client"
-    target-branch: "develop"
+  - package-ecosystem: 'npm'
+    directory: '/client'
+    target-branch: 'develop'
     schedule:
-      interval: "daily"
+      interval: 'daily'
     labels:
-      - "client dependencies"
+      - 'dependencies'
 
-  - package-ecosystem: "npm"
-    target-branch: "develop"
-    directory: "/server"
+  - package-ecosystem: 'npm'
+    target-branch: 'develop'
+    directory: '/server'
     schedule:
-      interval: "daily"
+      interval: 'daily'
     labels:
-      - "server dependencies"
+      - 'dependencies'

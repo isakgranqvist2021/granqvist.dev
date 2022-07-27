@@ -1,4 +1,4 @@
 export interface GridItemProps {
-	src: string;
-	backgroundSize?: string;
+  src: string;
+  backgroundSize?: string;
 }

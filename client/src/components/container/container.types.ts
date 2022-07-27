@@ -1,2 +1,2 @@
 export interface ContainerProps
-	extends React.ComponentPropsWithoutRef<'section'> {}
+  extends React.ComponentPropsWithoutRef<'section'> {}

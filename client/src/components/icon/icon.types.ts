@@ -1,4 +1,4 @@
 export interface IconProps extends React.ComponentPropsWithoutRef<'span'> {
-	icon: string;
-	clickable?: boolean;
+  icon: string;
+  clickable?: boolean;
 }
