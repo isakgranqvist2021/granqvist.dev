@@ -7,11 +7,11 @@ import react from './react.png';
 import typescript from './typescript.png';
 
 export const images: Record<string, string> = {
-	aws,
-	angular,
-	gcp,
-	go,
-	node,
-	react,
-	typescript,
+  aws,
+  angular,
+  gcp,
+  go,
+  node,
+  react,
+  typescript,
 };

@@ -1,4 +1,4 @@
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
-	outlined?: boolean;
-	variant?: 'primary' | 'secondary';
+  outlined?: boolean;
+  variant?: 'primary' | 'secondary';
 }

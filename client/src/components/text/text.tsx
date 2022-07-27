@@ -1,9 +1,8 @@
-import { TextProps } from "./text.types";
-
-import { Styled } from "./text.styled";
+import { Styled } from './text.styled';
+import { TextProps } from './text.types';
 
 export const Text = (props: TextProps) => {
-  const { variant = "body1", color, text, children, ...rest } = props;
+  const { variant = 'body1', color, text, children, ...rest } = props;
 
   const Element = Styled[variant];
 

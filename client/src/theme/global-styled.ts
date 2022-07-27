@@ -26,8 +26,8 @@ export const GlobalStyles = createGlobalStyle`
     body, html {
         width: 100%;
         overflow-x: hidden; 
-        font-family: 'Roboto', sans-serif;
         scroll-behavior: smooth;
+        font-family: 'Roboto', sans-serif;
      }
 
     input,

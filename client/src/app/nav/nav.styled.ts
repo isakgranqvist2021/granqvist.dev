@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { MOBILE_NAV_BREAKPOINT } from "./nav.constants";
-import { NavState } from "./nav.types";
+import { MOBILE_NAV_BREAKPOINT } from './nav.constants';
+import { NavState } from './nav.types';
 
-const Nav = styled("nav")`
+const Nav = styled('nav')`
   background-color: rgb(207, 48, 48);
   height: 80px;
   position: fixed;
@@ -24,7 +24,7 @@ const Nav = styled("nav")`
   }
 `;
 
-const NavLinks = styled("div")<NavState>`
+const NavLinks = styled('div')<NavState>`
   @media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
     position: fixed;
     background: rgb(255, 255, 255);
@@ -55,7 +55,7 @@ const NavLinks = styled("div")<NavState>`
   }
 `;
 
-const Link = styled("a")`
+const Link = styled('a')`
   color: #fff;
   text-transform: uppercase;
   display: inline-block;
@@ -68,7 +68,7 @@ const Link = styled("a")`
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     background-color: #fff;
     height: 2px;
     position: absolute;
@@ -113,7 +113,7 @@ const Link = styled("a")`
   }
 `;
 
-const Backdrop = styled("div")<NavState>`
+const Backdrop = styled('div')<NavState>`
   display: none;
   position: fixed;
   inset: 0;
@@ -134,7 +134,7 @@ const Backdrop = styled("div")<NavState>`
   }
 `;
 
-const Logo = styled("img")`
+const Logo = styled('img')`
   display: block;
   height: 100%;
   max-width: 200px;
@@ -146,7 +146,7 @@ const Logo = styled("img")`
 `;
 
 const Bars = {
-  Container: styled("div")<NavState>`
+  Container: styled('div')<NavState>`
     display: none;
     height: 35px;
     width: 45px;
@@ -159,7 +159,7 @@ const Bars = {
       display: flex;
     }
   `,
-  Line: styled("div")<NavState>`
+  Line: styled('div')<NavState>`
     height: 3px;
     width: 100%;
     background-color: #fff;

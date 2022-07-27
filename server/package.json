@@ -4,6 +4,7 @@
   "description": "granqivst.dev",
   "main": "main.js",
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "@types/express": "^4.17.13",
     "prettier": "^2.7.1"
   },
@@ -11,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --project tsconfig.json",
     "dev": "tsc --project tsconfig.json -W",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "format:ts": "prettier --write \"**/.ts{x}\""
   },
   "author": "Isak Granqvist",
   "license": "MIT",
@@ -19,5 +21,5 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "typescript": "^4.7.4"
-  }
+  } 
 }

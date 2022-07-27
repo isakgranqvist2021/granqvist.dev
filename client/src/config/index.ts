@@ -1,1 +1,1 @@
-export * from './reportWebVitals'
+export * from './reportWebVitals';

@@ -1,3 +1,3 @@
 export interface NavState {
-	open: boolean;
+  open: boolean;
 }
