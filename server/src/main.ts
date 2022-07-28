@@ -1,9 +1,11 @@
+import compression from 'compression';
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 
 const app = express();
 
+app.use(compression());
 app.use(express.static(path.resolve('./public')));
 
 app.get('/', (_, res) => {
