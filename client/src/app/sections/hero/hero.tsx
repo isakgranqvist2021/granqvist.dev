@@ -1,6 +1,8 @@
 import { Button, Link, Text } from 'components';
 
+import artboard from './artboard.svg';
 import { Styled } from './hero.styled';
+import phone from './phone.svg';
 
 export const Hero = () => {
   const onClickHandler = (hash: string) => {
@@ -40,11 +42,8 @@ export const Hero = () => {
           </Styled.HeroActions>
         </Styled.HeroContent>
       </Styled.HeroContainer>
-      <Styled.Phone src="/phone.svg" aria-label="Smartphone icon" />
-      <Styled.Artboard
-        src="/artboard.svg"
-        aria-label="Webpage image with icons"
-      />
+      <Styled.Phone src={phone} aria-label="Smartphone icon" />
+      <Styled.Artboard src={artboard} aria-label="Webpage image with icons" />
     </Styled.Hero>
   );
 };

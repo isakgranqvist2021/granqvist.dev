@@ -35,7 +35,7 @@ const Card = styled('div')`
 const CardIcon = styled('span')`
   font-size: 1.5rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  padding: 30px;
+  padding: 12px;
   border-radius: 50%;
   background-color: #fff;
   color: #333;
@@ -45,6 +45,11 @@ const CardIcon = styled('span')`
   align-items: center;
   justify-content: center;
   font-family: 'Material Icons Outlined';
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const Styled = { Features, Grid, Card, CardIcon };

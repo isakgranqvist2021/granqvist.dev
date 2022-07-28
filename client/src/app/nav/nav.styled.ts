@@ -152,6 +152,7 @@ const Bars = {
     width: 45px;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 
     @media (max-width: ${MOBILE_NAV_BREAKPOINT}) {
       height: 28px;

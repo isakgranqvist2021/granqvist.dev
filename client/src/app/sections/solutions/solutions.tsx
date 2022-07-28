@@ -1,6 +1,9 @@
 import { Container, Text } from 'components';
 
+import cloud from './cloud.svg';
+import domain from './domain.svg';
 import { Styled } from './solutions.styled';
+import storeFront from './store-front.svg';
 
 export const Features = () => {
   return (
@@ -9,7 +12,7 @@ export const Features = () => {
         <Styled.Grid>
           <Styled.Card data-aos="fade-right">
             <Styled.CardIcon aria-label="Business building icon">
-              business
+              <img src={domain} alt="" />
             </Styled.CardIcon>
             <Text text="Backend Development" variant="h3" />
             <Text variant="subtitle3">
@@ -20,7 +23,7 @@ export const Features = () => {
           </Styled.Card>
           <Styled.Card data-aos="fade-up">
             <Styled.CardIcon aria-label="Storefront icon">
-              storefront
+              <img src={storeFront} alt="" />
             </Styled.CardIcon>
             <Text text="Frontend Development" variant="h3" />
             <Text variant="subtitle3">
@@ -29,7 +32,9 @@ export const Features = () => {
             </Text>
           </Styled.Card>
           <Styled.Card data-aos="fade-left" aria-label="Cloud icon">
-            <Styled.CardIcon>cloud</Styled.CardIcon>
+            <Styled.CardIcon>
+              <img src={cloud} alt="" />
+            </Styled.CardIcon>
             <Text text="Cloud Solutions" variant="h3" />
             <Text variant="subtitle3">
               Are you looking to scale your software infrastructure with tools

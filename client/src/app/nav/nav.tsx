@@ -1,5 +1,6 @@
 import { Container } from 'components';
 
+import logo from './logo.svg';
 import { LINKS } from './nav.constants';
 import { useNavState } from './nav.helpers';
 import { Styled } from './nav.styled';
@@ -12,8 +13,8 @@ export const Nav = () => {
       <Container className="container">
         <a href="#Home" aria-label="Top of the page link">
           <Styled.Logo
-            aria-label="isakgranqvist.com company logo"
-            src="/static/images/logo.svg"
+            aria-label="granqvist.dev company logo"
+            src={logo}
             alt="Isak Granqvist Logo"
           />
         </a>

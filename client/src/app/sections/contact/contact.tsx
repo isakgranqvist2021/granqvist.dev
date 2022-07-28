@@ -1,6 +1,9 @@
 import { Text } from 'components';
 
 import { Styled } from './contact.styled';
+import github from './github.svg';
+import instagram from './instagram.svg';
+import linkedin from './linkedin.svg';
 
 export const Contact = () => {
   return (
@@ -22,7 +25,7 @@ export const Contact = () => {
               href="https://www.instagram.com/isakgranqvist2021/"
               title="Instagram"
             >
-              <img src="/static/icons/instagram.svg" alt="Instagram Icon" />
+              <img src={instagram} alt="Instagram Icon" />
             </a>
             <a
               target="_blank"
@@ -32,7 +35,7 @@ export const Contact = () => {
               href="https://www.linkedin.com/in/isak-granqvist-b1217a207/"
               title="Linkedin"
             >
-              <img src="/static/icons/linkedin.svg" alt="Linkedin Icon" />
+              <img src={linkedin} alt="Linkedin Icon" />
             </a>
             <a
               target="_blank"
@@ -42,7 +45,7 @@ export const Contact = () => {
               href="https://github.com/isakgranqvist2021"
               title="Github"
             >
-              <img src="/static/icons/github.svg" alt="Github Icon" />
+              <img src={github} alt="Github Icon" />
             </a>
           </Styled.SocialIcons>
 
