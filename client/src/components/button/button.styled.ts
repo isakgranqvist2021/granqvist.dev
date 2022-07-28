@@ -34,7 +34,7 @@ const primary = styled('button')<ButtonProps>`
   border-color: #cf3030;
   color: #fff;
 
-  &:hover {
+  :hover {
     background-color: transparent;
     color: #cf3030;
   }
@@ -46,7 +46,7 @@ const primary = styled('button')<ButtonProps>`
       border-color: #cf3030;
       color: #cf3030;
 
-      &:hover {
+      :hover {
         background-color: #cf3030;
         color: #fff;
       }
@@ -62,7 +62,7 @@ const secondary = styled('button')<ButtonProps>`
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-  &:hover {
+  :hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 

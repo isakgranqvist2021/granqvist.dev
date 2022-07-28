@@ -15,7 +15,7 @@ export const Features = () => {
               <img src={domain} alt="Business building icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Backend Development" variant="h3" />
-            <Text variant="subtitle3">
+            <Text variant="subtitle2">
               Do you need reliable software to power your business
               infrastructure? I utilize popular tools like TypeScript, C# and Go
               to make that happen.
@@ -26,7 +26,7 @@ export const Features = () => {
               <img src={storeFront} alt="Storefront icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Frontend Development" variant="h3" />
-            <Text variant="subtitle3">
+            <Text variant="subtitle2">
               Do you want a modern, fast and user friendly user interface? I
               build modern user interfaces with tools like React and Angular.
             </Text>
@@ -36,7 +36,7 @@ export const Features = () => {
               <img src={cloud} alt="Cloud icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Cloud Solutions" variant="h3" />
-            <Text variant="subtitle3">
+            <Text variant="subtitle2">
               Are you looking to scale your software infrastructure with tools
               provided by Google or Amazon? Then I would be glad to help you.
             </Text>
