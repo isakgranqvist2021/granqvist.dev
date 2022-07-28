@@ -6,7 +6,7 @@ const Link = styled('a')<LinkProps>`
   color: rgb(207, 48, 48);
   text-decoration: none;
 
-  &:hover {
+  :hover {
     text-decoration: underline;
   }
 `;

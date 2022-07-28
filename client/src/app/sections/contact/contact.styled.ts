@@ -61,16 +61,25 @@ const SocialIcons = styled('div')`
 
   a {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    padding: 1rem;
     border-radius: 50%;
-    transition: all 200ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease !important;
+    width: 64px;
+    height: 64px;
+    border: 2px solid transparent;
 
-    &:hover {
+    :active {
+      border-color: rgb(207, 48, 48);
+    }
+
+    :hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
     }
 
-    &:not(:last-of-type) {
+    :not(:last-of-type) {
       margin-right: 1rem;
     }
 

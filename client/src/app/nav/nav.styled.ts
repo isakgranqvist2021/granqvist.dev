@@ -66,8 +66,8 @@ const Link = styled('a')`
   transition: all 200ms ease;
   position: relative;
 
-  &::before,
-  &::after {
+  ::before,
+  ::after {
     content: '';
     background-color: #fff;
     height: 2px;
@@ -77,23 +77,23 @@ const Link = styled('a')`
     transition: all 200ms ease;
   }
 
-  &::before {
+  ::before {
     left: 0;
   }
 
-  &::after {
+  ::after {
     right: 0;
   }
 
-  &:hover,
-  &.is-current {
-    &::before,
-    &::after {
+  :hover,
+  .is-current {
+    ::before,
+    ::after {
       width: 50%;
     }
   }
 
-  &:not(:first-of-type) {
+  :not(:first-of-type) {
     margin-left: 1rem;
   }
 
@@ -102,12 +102,12 @@ const Link = styled('a')`
     padding: 1rem;
     color: #333;
 
-    &:not(:last-of-type) {
+    :not(:last-of-type) {
       border-bottom: 1px solid #f5f5f5;
     }
 
-    &::before,
-    &::after {
+    ::before,
+    ::after {
       display: none;
     }
   }
@@ -168,11 +168,11 @@ const Bars = {
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.6, -0.4, 0.735, 0.045);
 
-    &:nth-of-type(1) {
+    :nth-of-type(1) {
       transform-origin: top left;
     }
 
-    &:nth-of-type(3) {
+    :nth-of-type(3) {
       transform-origin: bottom left;
     }
 
@@ -183,16 +183,16 @@ const Bars = {
     ${(props) => css`
       ${props.open &&
       css`
-        &:nth-of-type(2) {
+        :nth-of-type(2) {
           opacity: 0;
           transform: translateX(100px);
         }
 
-        &:nth-of-type(1) {
+        :nth-of-type(1) {
           transform: rotate(45deg);
         }
 
-        &:nth-of-type(3) {
+        :nth-of-type(3) {
           transform: rotate(-45deg);
         }
       `}
