@@ -25,7 +25,7 @@ export const Contact = () => {
               href="https://www.instagram.com/isakgranqvist2021/"
               title="Instagram"
             >
-              <img src={instagram} alt="Instagram Icon" />
+              <img src={instagram} alt="Instagram Icon" loading="lazy" />
             </a>
             <a
               target="_blank"
@@ -35,7 +35,7 @@ export const Contact = () => {
               href="https://www.linkedin.com/in/isak-granqvist-b1217a207/"
               title="Linkedin"
             >
-              <img src={linkedin} alt="Linkedin Icon" />
+              <img src={linkedin} alt="Linkedin Icon" loading="lazy" />
             </a>
             <a
               target="_blank"
@@ -45,7 +45,7 @@ export const Contact = () => {
               href="https://github.com/isakgranqvist2021"
               title="Github"
             >
-              <img src={github} alt="Github Icon" />
+              <img src={github} alt="Github Icon" loading="lazy" />
             </a>
           </Styled.SocialIcons>
 
