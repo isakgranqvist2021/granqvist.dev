@@ -13,12 +13,12 @@ export const Hero = () => {
     <Styled.Hero id="Home" aria-label="Hero section" tabIndex={0}>
       <Styled.HeroContainer>
         <Styled.HeroContent>
-          <Text variant="h1">
+          <Text variant="h1" data-aos="fade-in">
             High Quality Software
             <br /> At Affordable Prices
           </Text>
 
-          <Text variant="subtitle1">
+          <Text variant="subtitle1" data-aos="fade-in">
             I build professional websites, modern mobile applications and
             reliable server software. <Link href="#Contact">Contact me</Link>{' '}
             for a quote or further information.

@@ -85,8 +85,7 @@ const Link = styled('a')`
     right: 0;
   }
 
-  :hover,
-  .is-current {
+  :hover {
     ::before,
     ::after {
       width: 50%;

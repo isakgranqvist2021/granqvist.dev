@@ -28,7 +28,7 @@ export const GRID_ITEMS = [
   },
   {
     src: images['aws'],
-    backgroundSize: '20%',
+    backgroundSize: '40%',
     alt: 'Amazon Web Services',
   },
 ];
