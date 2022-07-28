@@ -28,13 +28,7 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden; 
         scroll-behavior: smooth;
         font-family: 'Roboto', sans-serif;
-     }
-
-    input,
-    textarea,
-    select {
-        font-family: Arial, Helvetica, sans-serif;
-    }   
+    }
 
     p {
         line-height: 1.4;
