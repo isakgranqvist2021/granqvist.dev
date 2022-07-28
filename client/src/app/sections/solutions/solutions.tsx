@@ -12,7 +12,7 @@ export const Features = () => {
         <Styled.Grid>
           <Styled.Card data-aos="fade-right">
             <Styled.CardIcon aria-label="Business building icon">
-              <img src={domain} alt="" />
+              <img src={domain} alt="Business building icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Backend Development" variant="h3" />
             <Text variant="subtitle3">
@@ -23,7 +23,7 @@ export const Features = () => {
           </Styled.Card>
           <Styled.Card data-aos="fade-up">
             <Styled.CardIcon aria-label="Storefront icon">
-              <img src={storeFront} alt="" />
+              <img src={storeFront} alt="Storefront icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Frontend Development" variant="h3" />
             <Text variant="subtitle3">
@@ -33,7 +33,7 @@ export const Features = () => {
           </Styled.Card>
           <Styled.Card data-aos="fade-left" aria-label="Cloud icon">
             <Styled.CardIcon>
-              <img src={cloud} alt="" />
+              <img src={cloud} alt="Cloud icon" loading="lazy" />
             </Styled.CardIcon>
             <Text text="Cloud Solutions" variant="h3" />
             <Text variant="subtitle3">
