@@ -5,6 +5,8 @@ import path from 'path';
 
 const app = express();
 
+app.disable('x-powered-by');
+
 app.use(compression());
 app.use(express.static(path.resolve('./public')));
 
