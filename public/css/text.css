@@ -44,6 +44,10 @@ h3 {
   letter-spacing: 1.1px;
 }
 
+.body1:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 950px) {
   h1 {
     font-size: 3.6rem;

@@ -1,0 +1,115 @@
+<style>
+  #home {
+    padding: 310px 0;
+    position: relative;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+  }
+
+  .artboard {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    bottom: 0;
+  }
+
+  .phone {
+    position: absolute;
+    z-index: -1;
+    bottom: 60%;
+    left: 60%;
+  }
+
+  @media (max-width: 1600px) {
+    .phone {
+      bottom: 70%;
+    }
+  }
+
+  @media (max-width: 950px) {
+    #home {
+      padding: 160px 0;
+    }
+
+    .artboard {
+      display: none;
+    }
+
+    .phone {
+      bottom: 30px;
+      left: 65%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #home {
+      padding: 50px 0;
+    }
+
+    .hero-content {
+      padding: 160px 0 100px 0;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .phone {
+      bottom: 60%;
+      left: 70%;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .phone {
+      bottom: 70%;
+    }
+  }
+</style>
+
+<div id="home" tabindex="1">
+  <div class="container">
+    <div class="hero-content">
+      <h1 data-aos="fade-in">
+        High Quality Software
+        <br />
+        At Affordable Prices
+      </h1>
+
+      <p class="subtitle1" data-aos="fade-in">
+        I build professional websites, modern mobile applications and reliable
+        server software. <a href="#contact">Contact me</a>
+        for a quote or further information.
+      </p>
+      <div class="hero-actions">
+        <button
+          class="outlined"
+          aria-label="Bring me to contact"
+          data-aos="fade-right"
+        >
+          Get in touch
+        </button>
+        <button aria-label="Bring me to technologies" data-aos="fade-left">
+          Technology
+        </button>
+      </div>
+    </div>
+  </div>
+  <img class="phone" alt="Smartphone icon" src="/public/images/phone.svg" />
+  <img
+    class="artboard"
+    src="/public/images/artboard.svg"
+    alt="Webpage image with icons"
+  />
+</div>
