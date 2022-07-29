@@ -1,4 +1,5 @@
-button {
+button,
+.button {
   border-width: 1px;
   border-style: solid;
   padding: 0.8rem 1.5rem;
@@ -14,26 +15,31 @@ button {
   background-color: #cf3030;
   border-color: #cf3030;
   color: #fff;
+  text-decoration: none !important;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   background-color: transparent;
   color: #cf3030;
 }
 
-button.outlined {
+button.outlined,
+.button.outlined {
   background-color: transparent;
   border-color: #cf3030;
   color: #cf3030;
 }
 
-button.outlined:hover {
+button.outlined:hover,
+.button.outlined:hover {
   background-color: #cf3030;
   color: #fff;
 }
 
 @media (max-width: 600px) {
-  button {
+  button,
+  .button {
     width: 100%;
   }
 }
