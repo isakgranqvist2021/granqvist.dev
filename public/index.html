@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="granqvist.dev, software developer, custom software solutions at affordable prices"
+    />
+    <meta
+      name="keywords"
+      content="web developer, software developer, frontend, backend, devops"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./static/images/icon.ico"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/text.css" />
+    <meta property="og:title" content="Isak Granqvist Software Developer" />
+    <meta
+      property="og:description"
+      content="Frontend, Backend, DevOps software developer"
+    />
+    <meta
+      property="og:image"
+      content="https://granqvist.com/static/images/og.png"
+    />
+    <meta property="og:url" content="https://granqvist.dev" />
+    <meta name="twitter:title" content="Isak Granqvist Software Developer" />
+    <meta name="twitter:description" content="Freelance software developer" />
+    <meta
+      name="twitter:image"
+      content="https://granqvist.dev/static/images/og.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" href="./static/images/icon.ico" />
+    <script
+      async
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-SFK4JQRKBG"
+    ></script>
+
+    <title>Isak Granqvist - Software Developer</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="#home" aria-label="Top of the page link">
+          <img
+            class="logo"
+            aria-label="granqvist.dev company logo"
+            src="./images/logo.svg"
+            alt="Isak Granqvist Logo"
+          />
+        </a>
+        <div class="nav-links">
+          <a href="#home" onClick="closeNav()">home</a>
+          <a href="#solutions" onClick="closeNav()">solutions</a>
+          <a href="#technology" onClick="closeNav()">technology</a>
+          <a href="#about" onClick="closeNav()">about</a>
+          <a href="#contact" onClick="closeNav()">contact</a>
+        </div>
+
+        <div class="bars" aria-label="Menu icon" onClick="toggleNav()">
+          <div class="bars-line"></div>
+          <div class="bars-line"></div>
+          <div class="bars-line"></div>
+        </div>
+      </div>
+
+      <div class="backdrop" onClick="closeNav()"></div>
+    </nav>
+
+    <div id="home" tabindex="1">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-aos="fade-in">
+            High Quality Software
+            <br />
+            At Affordable Prices
+          </h1>
+
+          <p class="subtitle1" data-aos="fade-in">
+            I build professional websites, modern mobile applications and
+            reliable server software. <a href="#Contact">Contact me</a>
+            for a quote or further information.
+          </p>
+          <div class="hero-actions">
+            <button
+              class="outlined"
+              aria-label="Bring me to contact"
+              data-aos="fade-right"
+            >
+              Get in touch
+            </button>
+            <button aria-label="Bring me to technologies" data-aos="fade-left">
+              Technology
+            </button>
+          </div>
+        </div>
+      </div>
+      <img class="phone" alt="Smartphone icon" src="./images/phone.svg" />
+      <img
+        class="artboard"
+        src="./images/artboard.svg"
+        alt="Webpage image with icons"
+      />
+    </div>
+
+    <div id="solutions" tabindex="1">
+      <div class="container">
+        <div class="grid">
+          <div class="card" data-aos="fade-right">
+            <div class="card-icon">
+              <img src="./images/domain.svg" alt="Business building icon" />
+            </div>
+            <h3>Backend Development</h3>
+            <p class="subtitle2">
+              Do you need reliable software to power your business
+              infrastructure? I utilize popular tools like TypeScript, C# and Go
+              to make that happen.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-up">
+            <div class="card-icon">
+              <img src="./images/store-front.svg" alt="Storefront icon" />
+            </div>
+            <h3>Frontend Development</h3>
+            <p class="subtitle2">
+              Do you want a modern, fast and user friendly user interface? I
+              build modern user interfaces with tools like React and Angular.
+            </p>
+          </div>
+          <div class="card" data-aos="fade-left">
+            <div class="card-icon">
+              <img src="./images/cloud.svg" alt="Cloud icon" />
+            </div>
+            <h3>Cloud Solutions</h3>
+            <p class="subtitle2">
+              Are you looking to scale your software infrastructure with tools
+              provided by Google or Amazon? Then I would be glad to help you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="technology" tabindex="2">
+      <div class="container">
+        <div class="grid">
+          <div
+            style="background-size: 60%; background-image: url(./images/go.png)"
+            class="grid-item"
+            data-aos="zoom-in"
+            title="Go Programming Language"
+          ></div>
+          <div
+            style="
+              background-size: 55%;
+              background-image: url(./images/node.png);
+            "
+            class="grid-item"
+            data-aos="zoom-in"
+            title="Node.js"
+          ></div>
+          <div
+            class="grid-item"
+            style="
+              background-size: 40%;
+              background-image: url(./images/react.png);
+            "
+            data-aos="zoom-in"
+            title="React.js"
+          ></div>
+          <div
+            style="
+              background-size: 30%;
+              background-image: url(./images/angular.png);
+            "
+            class="grid-item"
+            data-aos="zoom-in"
+            title="Angular"
+          ></div>
+          <div
+            style="
+              background-size: 70%;
+              background-image: url(./images/typescript.png);
+            "
+            class="grid-item"
+            data-aos="zoom-in"
+            title="TypeScript"
+          ></div>
+          <div
+            style="
+              background-size: 40%;
+              background-image: url(./images/aws.png);
+            "
+            class="grid-item"
+            data-aos="zoom-in"
+            title="Amazon Web Services"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" tabindex="3">
+      <div class="container">
+        <div class="flex-item">
+          <h2 data-aos="fade-down">granqvist.dev</h2>
+          <p class="body1" data-aos="fade-up">
+            The primary purpose of my business is to deliver reliable, scalable,
+            and high-quality software - at affordable prices.
+          </p>
+          <p class="body1" data-aos="fade-up">
+            I mostly deliver custom software and applications tailored to
+            specific business requirements. Primarily web applications.
+          </p>
+          <p class="body1" data-aos="fade-up">
+            Software infrastructure is an essential part of many businesses and
+            reliability should be the highest priority for anyone seeking
+            longevity.
+          </p>
+        </div>
+        <div class="flex-item" data-aos="fade-left">
+          <svg
+            width="1162"
+            height="1162"
+            viewBox="0 0 1162 1162"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M581 0C260.143 0 0 260.143 0 581C0 901.857 260.143 1162 581 1162C901.857 1162 1162 901.857 1162 581C1162 260.143 901.857 0 581 0ZM482.569 775.151C509.876 688.533 561.585 584.777 570.736 558.535C583.953 520.431 560.52 503.533 486.491 568.654L470.029 537.667C554.468 445.821 728.332 425.05 669.167 567.347C632.225 656.191 605.789 716.179 590.683 762.466C568.654 829.91 624.285 802.555 678.753 752.25C686.161 764.354 688.582 768.276 695.99 782.22C575.045 897.355 440.785 907.522 482.569 775.151V775.151ZM712.161 379.635C686.403 401.568 648.251 401.084 626.899 378.57C605.547 356.056 609.13 320.083 634.839 298.15C660.597 276.217 698.749 276.75 720.101 299.215C741.356 321.777 737.87 357.751 712.161 379.635Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" tabindex="4">
+      <div class="container">
+        <div class="social" aria-label="Social media icons">
+          <h3 data-aos="fade-in">You can find me on social media</h3>
+
+          <div class="social-icons">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              data-aos="fade-right"
+              href="https://www.instagram.com/isakgranqvist2021/"
+              title="Instagram"
+            >
+              <img
+                src="./images/instagram.svg"
+                alt="Instagram Icon"
+                loading="lazy"
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              data-aos="zoom-in"
+              href="https://www.linkedin.com/in/isak-granqvist-b1217a207/"
+              title="Linkedin"
+            >
+              <img
+                src="./images/linkedin.svg"
+                alt="Linkedin Icon"
+                loading="lazy"
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              data-aos="fade-left"
+              href="https://github.com/isakgranqvist2021"
+              title="Github"
+            >
+              <img src="./images/github.svg" alt="Github Icon" loading="lazy" />
+            </a>
+          </div>
+
+          <p class="email-text">contact@granqvist.dev</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 2000 });
+    </script>
+    <script src="./js/index.js"></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-SFK4JQRKBG");
+    </script>
+  </body>
+</html>
+<!--
+                 ,▄▄▓██████▓▄▄,
+             ▄▓███████████████████▄
+          ▄████████▀▀▀╙╙╙╙▀▀▀████████▄
+        ▄██████▀└              └▀██████▄
+       ██████└                    └▀█████
+      █████▀                        ╙█████µ
+     █████¬                    ▄█▓    █████
+    ╟████⌐      ╓▄           ╓███▀     ████▌
+    █████       ███▌        ▓███─      █████
+    █████        ▀███,,▓▓ ╓███▀        ╟████
+    █████         └██████████`         █████
+    ╙████▌          ▀██▀███▀          ▐████▌
+     ╟████▄                          ╓█████
+      ▀█████                        ▓█████
+       ╙██████,                  ,▄█████▀
+         ▀██████▓▄            ▄▓██████▀
+           ╙████████████████████████▀
+              ╙▀████████████████▀╙
+                    └╙╙╙╙╙╙└─
+-->
