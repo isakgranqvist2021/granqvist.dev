@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+  </head>
+  <body>
+    <%- include("./partials/nav") %> <%- include("./sections/home") %> <%-
+    include("./sections/solutions") %> <%- include("./sections/technology") %>
+    <%- include("./sections/about") %> <%- include("./sections/contact") %>
+
+    <script src="/public/js/aos.min.js"></script>
+    <script>
+      AOS.init({ duration: 2000 });
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SFK4JQRKBG"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag('js', new Date()),
+        gtag('config', 'G-SFK4JQRKBG');
+    </script>
+  </body>
+</html>

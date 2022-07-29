@@ -1,0 +1,237 @@
+<style>
+  nav {
+    background-color: rgb(207, 48, 48);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+  }
+
+  nav .container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    padding: 5px 0;
+    transition: all 200ms ease;
+    position: relative;
+  }
+
+  .nav-links a::before,
+  .nav-links a::after {
+    content: '';
+    background-color: #fff;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    top: 100%;
+    transition: all 200ms ease;
+  }
+
+  .nav-links a::before {
+    left: 0;
+  }
+
+  .nav-links a::after {
+    right: 0;
+  }
+
+  .nav-links a:hover::before {
+    width: 50%;
+  }
+
+  .nav-links a:hover::after {
+    width: 50%;
+  }
+
+  .nav-links a:not(:first-of-type) {
+    margin-left: 1rem;
+  }
+
+  .backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 14;
+    pointer-events: none;
+    transition: all 300ms ease;
+  }
+
+  .logo {
+    display: block;
+    height: 100%;
+    max-width: 200px;
+  }
+
+  .bars {
+    display: none;
+    height: 35px;
+    width: 45px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .bars-line {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.6, -0.4, 0.735, 0.045);
+  }
+
+  .bars-line:nth-of-type(1) {
+    transform-origin: top left;
+  }
+
+  .bars-line:nth-of-type(3) {
+    transform-origin: bottom left;
+  }
+
+  .bars-line.open:nth-of-type(2) {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  .bars-line.open:nth-of-type(1) {
+    transform: rotate(45deg);
+  }
+
+  .bars-line.open:nth-of-type(3) {
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 760px) {
+    nav {
+      height: 60px;
+      padding: 0 1rem;
+    }
+
+    .nav-links {
+      position: fixed;
+      background: rgb(255, 255, 255);
+      top: 0;
+      left: 0;
+      height: 100%;
+      overflow: hidden;
+      width: 0;
+      transition: all 300ms ease;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-links.open {
+      width: 180px;
+    }
+
+    .nav-links ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-links a {
+      margin-left: 0 !important;
+      padding: 1rem;
+      color: #333;
+    }
+
+    .nav-links a:not(:last-of-type) {
+      border-bottom: 1px solid #f5f5f5;
+    }
+
+    .nav-links a::before,
+    .nav-links a::after {
+      display: none;
+    }
+
+    .backdrop {
+      display: block;
+    }
+
+    .backdrop.open {
+      background-color: rgba(0, 0, 0, 0.568);
+      pointer-events: all;
+    }
+
+    .bars {
+      height: 28px;
+      width: 36px;
+      display: flex;
+    }
+
+    .logo {
+      display: block;
+      height: 36px;
+    }
+
+    .bars-line {
+      height: 2px;
+    }
+  }
+</style>
+<nav>
+  <div class="container">
+    <a href="#home" aria-label="Top of the page link">
+      <img
+        class="logo"
+        aria-label="granqvist.dev company logo"
+        src="/public/images/logo.svg"
+        alt="Isak Granqvist Logo"
+      />
+    </a>
+    <div class="nav-links">
+      <a href="#home" onClick="closeNav()">home</a>
+      <a href="#solutions" onClick="closeNav()">solutions</a>
+      <a href="#technology" onClick="closeNav()">technology</a>
+      <a href="#about" onClick="closeNav()">about</a>
+      <a href="#contact" onClick="closeNav()">contact</a>
+    </div>
+
+    <div class="bars" aria-label="Menu icon" onClick="toggleNav()">
+      <div class="bars-line"></div>
+      <div class="bars-line"></div>
+      <div class="bars-line"></div>
+    </div>
+  </div>
+
+  <div class="backdrop" onClick="closeNav()"></div>
+</nav>
+
+<script>
+  const toggleNav = () => {
+    const barsLines = document.querySelectorAll('.bars-line');
+    const navLinks = document.querySelector('.nav-links');
+    const backdrop = document.querySelector('.backdrop');
+
+    const elements = Array.from([...barsLines, navLinks, backdrop]);
+
+    elements.forEach((element) => {
+      element.classList.toggle('open');
+    });
+  };
+
+  const closeNav = () => {
+    const barsLines = document.querySelectorAll('.bars-line');
+    const navLinks = document.querySelector('.nav-links');
+    const backdrop = document.querySelector('.backdrop');
+
+    const elements = Array.from([...barsLines, navLinks, backdrop]);
+
+    elements.forEach((element) => {
+      element.classList.remove('open');
+    });
+  };
+</script>

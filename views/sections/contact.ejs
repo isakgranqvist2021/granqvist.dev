@@ -1,0 +1,158 @@
+<style>
+  #contact {
+    padding: 100px 0;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  #contact .container {
+    display: flex;
+  }
+
+  #contact .social {
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  #contact a {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease !important;
+    width: 64px;
+    height: 64px;
+    border: 2px solid transparent;
+  }
+
+  #contact a:active {
+    border-color: rgb(207, 48, 48);
+  }
+
+  #contact a:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  #contact a:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+
+  #contact a img {
+    height: 32px;
+    width: 32px;
+    display: block;
+  }
+
+  #contact h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #333;
+  }
+
+  #contact p {
+    text-transform: lowercase;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #333;
+  }
+
+  @media (max-width: 1100px) {
+    #contact .social-icons {
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    #contact .container {
+      flex-direction: column-reverse;
+    }
+
+    #contact .social {
+      margin: 0 0 50px 0 !important;
+      text-align: center;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #contact {
+      padding: 50px 0;
+    }
+
+    #contact .container {
+      gap: 25px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    #contact .social-icons a {
+      margin-bottom: 10px;
+    }
+
+    #contact h3 {
+      font-size: 2rem;
+    }
+  }
+</style>
+<div id="contact" tabindex="4">
+  <div class="container">
+    <div class="social" aria-label="Social media icons">
+      <h3 data-aos="fade-in">You can find me on social media</h3>
+
+      <div class="social-icons">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          data-aos="fade-right"
+          href="https://www.instagram.com/isakgranqvist2021/"
+          title="Instagram"
+        >
+          <img
+            src="/public/images/instagram.svg"
+            alt="Instagram Icon"
+            loading="lazy"
+          />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          data-aos="zoom-in"
+          href="https://www.linkedin.com/in/isak-granqvist-b1217a207/"
+          title="Linkedin"
+        >
+          <img
+            src="/public/images/linkedin.svg"
+            alt="Linkedin Icon"
+            loading="lazy"
+          />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          data-aos="fade-left"
+          href="https://github.com/isakgranqvist2021"
+          title="Github"
+        >
+          <img
+            src="/public/images/github.svg"
+            alt="Github Icon"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <p class="email-text">contact@granqvist.dev</p>
+    </div>
+  </div>
+</div>
