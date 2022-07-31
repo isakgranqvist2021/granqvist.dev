@@ -1,5 +1,6 @@
+import env from './config';
+import router from './routers';
 import compression from 'compression';
-import 'dotenv/config';
 import express from 'express';
 import path from 'path';
 
@@ -10,12 +11,11 @@ app.set('view engine', '.ejs');
 
 app.use(compression());
 app.use('/public', express.static(path.resolve('./public')));
+app.use('*', router);
 
-app.get('/', (_, res) => {
-  res.render('index');
-});
+const port = env.environment === 'production' ? 80 : 8080;
 
-const port = process.env.ENVIRONMENT === 'production' ? 80 : 8080;
+console.log(process.env.test);
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
