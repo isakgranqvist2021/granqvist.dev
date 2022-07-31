@@ -15,8 +15,6 @@ app.use('*', router);
 
 const port = env.environment === 'production' ? 80 : 8080;
 
-console.log(process.env.test);
-
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
