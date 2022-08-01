@@ -1,0 +1,49 @@
+#projects {
+  padding: 100px 0;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+
+#projects .grid {
+  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#projects .grid-item {
+  padding: 1.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 200ms ease !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.03);
+}
+
+#projects .grid-item:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
+}
+
+#projects .grid-item img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 7px;
+}
+
+#projects .grid-item h4 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 7px;
+  text-align: center;
+  letter-spacing: 1.32px;
+}
+
+#projects .grid-item p {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}

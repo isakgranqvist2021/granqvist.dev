@@ -3,26 +3,38 @@ import axios from 'axios';
 
 interface Repository {
   id: number;
+  created_at: string;
+  description: string | null;
+  full_name: string;
+  homepage: string | null;
+  html_url: string;
+  language: string | null;
   node_id: string;
   name: string;
-  full_name: string;
   private: boolean;
-  html_url: string;
-  description: string | null;
-  homepage: string | null;
-  language: string | null;
+  pushed_at: string;
+  updated_at: string;
 }
 
-export const getRepositories = async (): Promise<Repository[] | null> => {
-  try {
-    const res = await axios.get(`https://api.github.com/user/repos`, {
-      headers: {
-        Accept: 'application/vnd.github+json',
-        Authorization: `token ${env.github_access_token}`,
-      },
-    });
+const include = [
+  'BehanceDesignUI',
+  'isakgranqvist.com',
+  'MultiplayerChess',
+  'MarinaMedia',
+  'VPNFinder',
+  'DropStore',
+];
 
-    return res.data.map((repository: any) => ({
+const headers = {
+  Accept: 'application/vnd.github+json',
+  Authorization: `token ${env.github_access_token}`,
+};
+
+const getRepositoryData = async (
+  repository: any
+): Promise<Repository | null> => {
+  try {
+    return {
       id: repository.id,
       node_id: repository.node_id,
       name: repository.name,
@@ -32,7 +44,30 @@ export const getRepositories = async (): Promise<Repository[] | null> => {
       description: repository.description,
       homepage: repository.homepage,
       language: repository.language,
-    }));
+      created_at: repository.created_at,
+      updated_at: repository.updated_at,
+      pushed_at: repository.pushed_at,
+    };
+  } catch {
+    return null;
+  }
+};
+
+export const getRepositories = async (): Promise<Repository[] | null> => {
+  try {
+    const res = await axios.get(`https://api.github.com/user/repos`, {
+      headers,
+    });
+
+    const data = res.data.filter((repository: any) =>
+      include.includes(repository.name)
+    );
+
+    const repositories: (Repository | null)[] = await Promise.all(
+      data.map(getRepositoryData)
+    );
+
+    return repositories.filter((repository) => repository) as Repository[];
   } catch {
     return null;
   }
