@@ -1,17 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-@import './components/button';
-@import './components/container';
-@import './components/link';
-@import './components/text';
-
-@import './partials/nav';
-
-@import './sections/about';
-@import './sections/contact';
-@import './sections/home';
-@import './sections/solutions';
-@import './sections/technology';
+@import './components/components';
+@import './partials/partials';
+@import './sections/sections';
 
 * {
   margin: 0;

@@ -4,6 +4,7 @@
 }
 
 .hero-content {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,14 +18,14 @@
 
 .artboard {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 50%;
   bottom: 0;
 }
 
 .phone {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   bottom: 60%;
   left: 60%;
 }
