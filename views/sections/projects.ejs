@@ -1,3 +1,5 @@
+<% console.log(repositories) %>
+
 <section id="projects" class="bg-light" tabindex="4">
   <div class="container">
     <h2>My Projects</h2>
@@ -10,12 +12,15 @@
         href="<%= repository.html_url %>"
       >
         <img
+          class="media"
           alt="<%= repository.name %>"
-          src="/public/images/png/octocat.png"
+          src="/public/images/svg/<%= repository.language %>.svg"
         />
 
-        <h4><%= repository.name %></h4>
-        <p><%= repository.description %></p>
+        <div class="grid-item-body">
+          <h4><%= repository.name %></h4>
+          <p><%= repository.description %></p>
+        </div>
       </a>
       <% }) %>
     </div>

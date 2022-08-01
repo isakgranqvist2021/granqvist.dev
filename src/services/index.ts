@@ -2,18 +2,12 @@ import env from '../config';
 import axios from 'axios';
 
 interface Repository {
-  id: number;
-  created_at: string;
   description: string | null;
-  full_name: string;
   homepage: string | null;
   html_url: string;
   language: string | null;
-  node_id: string;
   name: string;
-  private: boolean;
   pushed_at: string;
-  updated_at: string;
 }
 
 const include = [
@@ -35,17 +29,11 @@ const getRepositoryData = async (
 ): Promise<Repository | null> => {
   try {
     return {
-      id: repository.id,
-      node_id: repository.node_id,
       name: repository.name,
-      full_name: repository.full_name,
-      private: repository.private,
       html_url: repository.html_url,
       description: repository.description,
       homepage: repository.homepage,
-      language: repository.language,
-      created_at: repository.created_at,
-      updated_at: repository.updated_at,
+      language: repository.language.toLowerCase(),
       pushed_at: repository.pushed_at,
     };
   } catch {
