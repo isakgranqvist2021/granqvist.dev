@@ -34,7 +34,7 @@ const getRepositoryData = async (
       description: repository.description,
       homepage: repository.homepage,
       language: repository.language.toLowerCase(),
-      pushed_at: repository.pushed_at,
+      pushed_at: new Date(repository.pushed_at).toLocaleDateString(),
     };
   } catch {
     return null;
