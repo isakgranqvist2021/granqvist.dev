@@ -4,7 +4,7 @@
   "description": "granqivst.dev",
   "main": "main.js",
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
     "@types/express": "^4.17.14",
     "prettier": "^2.7.1"
   },
