@@ -36,7 +36,8 @@ const getRepositoryData = async (
       language: repository.language.toLowerCase(),
       pushed_at: new Date(repository.pushed_at).toLocaleDateString(),
     };
-  } catch {
+  } catch(err) {
+    console.log(err);
     return null;
   }
 };
@@ -58,7 +59,8 @@ export const getRepositories = async (): Promise<Repository[] | null> => {
     const output = repositories.filter((repository) => repository) as Repository[];
     
     return output ?? []
-  } catch {
+  } catch(err) {
+    console.log(err);
     return null;
   }
 };
