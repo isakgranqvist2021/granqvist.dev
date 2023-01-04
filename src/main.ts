@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import env from './config';
 import router from './routers';
 import compression from 'compression';
