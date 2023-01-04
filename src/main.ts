@@ -13,7 +13,7 @@ app.use(compression());
 app.use('/public', express.static(path.resolve('./public')));
 app.use('*', router);
 
-const port = env.environment === 'production' ? 80 : 8080;
+const port = process.env.PORt || 8080
 
 app.listen(port, () => {
   if (env.environment !== 'production') {
