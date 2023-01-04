@@ -6,7 +6,8 @@ export const index = async (req: Request, res: Response) => {
     const repositories = await getRepositories();
 
     res.render('index', { repositories });
-  } catch {
+  } catch(err) {
+    console.log(err);
     res.render('index', { repositories: [] });
   }
 };
