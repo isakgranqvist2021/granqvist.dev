@@ -55,7 +55,9 @@ export const getRepositories = async (): Promise<Repository[] | null> => {
       data.map(getRepositoryData)
     );
 
-    return repositories.filter((repository) => repository) as Repository[];
+    const output = repositories.filter((repository) => repository) as Repository[];
+    
+    return output ?? []
   } catch {
     return null;
   }
