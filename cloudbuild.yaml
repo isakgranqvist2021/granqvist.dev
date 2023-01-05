@@ -1,8 +1,8 @@
 steps:
-  - name: node:10.15.1
+  - name: Install dependencies
     entrypoint: npm
     args: ['install']
-  - name: node:10.15.1
+  - name: Create .env file in root dir
     entrypoint: npm
     args: ['run', 'create-env']
     env:
