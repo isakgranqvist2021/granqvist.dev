@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import env from './config';
 import router from './routers';
 import compression from 'compression';
@@ -13,7 +14,7 @@ app.use(compression());
 app.use('/public', express.static(path.resolve('./public')));
 app.use('*', router);
 
-const port = env.environment === 'production' ? 80 : 8080;
+const port = process.env.PORT || 8080
 
 app.listen(port, () => {
   if (env.environment !== 'production') {

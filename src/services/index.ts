@@ -14,9 +14,9 @@ const include = [
   'BehanceDesignUI',
   'isakgranqvist.com',
   'MultiplayerChess',
-  'MarinaMedia',
   'VPNFinder',
   'DropStore',
+  'GodaddyAffiliate',
 ];
 
 const headers = {
