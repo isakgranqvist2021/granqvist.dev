@@ -1,9 +1,9 @@
-import { getRepositories } from '../services';
+import { getRepos } from '../services';
 import { Request, Response } from 'express';
 
-export const index = async (req: Request, res: Response) => {
+export const index = async (_: Request, res: Response) => {
   try {
-    const repositories = await getRepositories();
+    const repositories = await getRepos();
 
     res.render('index', { repositories });
   } catch {
