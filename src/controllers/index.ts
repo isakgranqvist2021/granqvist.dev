@@ -1,11 +1,15 @@
-import { getRepositoriesFromGithub } from '../services';
+import { getRepositoriesFromGithub, Repository } from '../services';
 import { Request, Response } from 'express';
+
+let repositories: Repository[] | null = null;
 
 export const index = async (_: Request, res: Response) => {
   try {
-    const repositories = await getRepositoriesFromGithub();
+    if (!repositories) {
+      repositories = await getRepositoriesFromGithub();
+    }
 
-    res.render('index', { repositories: repositories ?? [] });
+    res.render('index', { repositories });
   } catch {
     res.render('index', { repositories: [] });
   }

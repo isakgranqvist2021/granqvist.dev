@@ -57,7 +57,9 @@ export const getRepositoriesFromGithub = async (): Promise<
       data.map(getRepositoryData)
     );
 
-    return repositories.filter((repository) => repository) as Repository[];
+    return repositories.filter(
+      (repository): repository is Repository => repository !== null
+    );
   } catch {
     return null;
   }
