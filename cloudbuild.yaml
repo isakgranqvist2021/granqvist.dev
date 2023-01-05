@@ -21,3 +21,8 @@ steps:
 
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy']
+
+  - name: bash
+    script:
+      #!/usr/bin/env bash
+      env
