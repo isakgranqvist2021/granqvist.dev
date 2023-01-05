@@ -14,8 +14,7 @@
     "build": "tsc --project tsconfig.json",
     "dev": "tsc --project tsconfig.json -W",
     "start": "node dist/main.js",
-    "format:ts": "prettier --write \"**/.ts{x}\"",
-    "gcp-build": "tsc --project tsconfig.json"
+    "format:ts": "prettier --write \"**/.ts{x}\""
   },
   "author": "Isak Granqvist",
   "license": "MIT",
