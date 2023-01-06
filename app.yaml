@@ -7,11 +7,11 @@ handlers:
     script: auto
 
 automatic_scaling:
-  min_idle_instances: 1
-  max_idle_instances: 1
+  min_idle_instances: automatic
+  max_idle_instances: automatic
   min_pending_latency: automatic
   max_pending_latency: automatic
   max_concurrent_requests: 700
-  max_instances: 3
+  max_instances: automatic
 
 service_account: granqvist-dev@gothic-venture-373811.iam.gserviceaccount.com
