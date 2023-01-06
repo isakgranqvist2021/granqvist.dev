@@ -1,8 +1,17 @@
 runtime: nodejs18
+env: standard
+instance_class: F1
+
+handlers:
+  - url: .*
+    script: auto
 
 automatic_scaling:
-  max_instances: 3
-  min_instances: 0
-  max_idle_instances: 0
   min_idle_instances: 0
+  max_idle_instances: 0
+  min_pending_latency: automatic
+  max_pending_latency: automatic
   max_concurrent_requests: 700
+  max_instances: 3
+
+service_account: granqvist-dev@gothic-venture-373811.iam.gserviceaccount.com
