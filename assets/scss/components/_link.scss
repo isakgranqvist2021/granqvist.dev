@@ -1,5 +1,7 @@
+@import '../utils/colors';
+
 a {
-  color: #cf3030;
+  color: $primary;
   text-decoration: none;
 }
 

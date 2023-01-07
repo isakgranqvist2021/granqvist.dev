@@ -1,3 +1,5 @@
+@import '../utils/colors';
+
 #about {
   padding: 100px 0;
   min-height: 75vh;
@@ -7,7 +9,7 @@
 
 #about h2,
 #about p {
-  color: #fff;
+  color: $textPrimary;
 }
 
 #about .container {
@@ -27,7 +29,7 @@
   width: 300px;
   height: 300px;
   max-width: 100%;
-  fill: #ffffff;
+  fill: $backgroundPrimary;
   margin: 0 auto;
 }
 
