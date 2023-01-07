@@ -3,12 +3,13 @@
   <div class="container">
     <h2>My Projects</h2>
 
-    <div class="grid">
+    <div class="grid" role="grid">
       <% repositories.forEach(repository => { %>
       <a
         class="grid-item"
         title="View repository"
         href="<%= repository.html_url %>"
+        role="gridcell"
       >
         <img
           data-aos="fade-in"
