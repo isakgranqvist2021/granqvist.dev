@@ -14,6 +14,7 @@ const requestHandler = async (_: express.Request, res: express.Response) => {
 
 const app = express();
 
+app.use('/public', express.static('./public'));
 app.disable('x-powered-by');
 app.set('view engine', '.ejs');
 app.use(compression());
