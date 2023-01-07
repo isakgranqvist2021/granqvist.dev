@@ -1,3 +1,4 @@
+@import '../utils/colors';
 @import './about';
 @import './contact';
 @import './home';
@@ -6,9 +7,9 @@
 @import './technology';
 
 .bg-dark {
-  background-color: #333;
+  background-color: $backgroundSecondary;
 }
 
 .bg-light {
-  background-color: #fff;
+  background-color: $backgroundPrimary;
 }
