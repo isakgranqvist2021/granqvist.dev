@@ -21,6 +21,10 @@
   z-index: 1;
   left: 50%;
   bottom: 0;
+
+  .primary {
+    fill: $primary;
+  }
 }
 
 .phone {
@@ -28,6 +32,10 @@
   z-index: 1;
   bottom: 60%;
   left: 60%;
+
+  .primary {
+    fill: $primary;
+  }
 }
 
 @media (max-width: 1600px) {

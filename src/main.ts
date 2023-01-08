@@ -2,6 +2,7 @@ import { GithubService } from './github.service';
 import compression from 'compression';
 import 'dotenv/config';
 import express from 'express';
+import rateLimit from 'express-rate-limit';
 
 const requestHandler = async (_: express.Request, res: express.Response) => {
   try {
@@ -14,6 +15,14 @@ const requestHandler = async (_: express.Request, res: express.Response) => {
 
 const app = express();
 
+const options = {
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+};
+
+app.use(rateLimit(options));
 app.use('/public', express.static('./public'));
 app.disable('x-powered-by');
 app.set('view engine', '.ejs');
