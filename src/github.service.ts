@@ -13,14 +13,8 @@ interface Repository {
 }
 
 const include = new Set([
-  'BehanceDesignUI',
-  'isakgranqvist.com',
-  'MultiplayerChess',
-  'VPNFinder',
-  'DropStore',
-  'GodaddyAffiliate',
-  'OpenAI-App',
-  'LitVPNS',
+  355564116, 370129939, 413560056, 472047527, 383219277, 583104477, 311357297,
+  395044515,
 ]);
 
 const isNotNull = (repository: object | null): repository is object => {
@@ -30,7 +24,7 @@ const isNotNull = (repository: object | null): repository is object => {
 export namespace GithubService {
   const repositoryMapper = (repository: any): Repository | null => {
     try {
-      if (!include.has(repository.name)) {
+      if (!include.has(repository.id)) {
         return null;
       }
 
