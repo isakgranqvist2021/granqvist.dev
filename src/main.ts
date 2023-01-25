@@ -15,18 +15,23 @@ const requestHandler = async (_: express.Request, res: express.Response) => {
 
 const app = express();
 
-const options = {
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  standardHeaders: true,
-  legacyHeaders: false,
-};
+if (process.env.ENVIRONMENT !== 'development') {
+  app.disable('x-powered-by');
 
-app.use(rateLimit(options));
+  const rateLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 100,
+    standardHeaders: true,
+    legacyHeaders: false,
+  });
+
+  app.use(rateLimiter);
+  app.use(compression());
+}
+
 app.use('/public', express.static('./public'));
-app.disable('x-powered-by');
 app.set('view engine', '.ejs');
-app.use(compression());
+
 app.all('*', requestHandler);
 
 app.listen(process.env.PORT || 8080, () =>
