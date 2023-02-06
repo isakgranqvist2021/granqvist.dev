@@ -17,7 +17,7 @@ COPY tsconfig.json .
 
 RUN npm ci
 RUN npm install
-RUN npm create-env
+RUN npm run create-env
 RUN npm run build
 
 RUN rm -rf src
