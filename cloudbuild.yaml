@@ -29,6 +29,9 @@ steps:
         'run',
         'deploy',
         'granqvist-dev',
+        '--allow-unauthenticated',
+        '--service-account',
+        '680698972592-compute@developer.gserviceaccount.com',
         '--image',
         'gcr.io/gothic-venture-373811/granqvist-dev-docker-container',
         '--region',
@@ -39,7 +42,7 @@ steps:
         '--min-instances',
         '0',
         '--memory',
-        '128Mi',
+        '512Mi',
         '--concurrency',
         '80',
       ]
