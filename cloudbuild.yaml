@@ -1,26 +1,44 @@
-options:
-  logging: CLOUD_LOGGING_ONLY
-
-timeout: '1600s'
-
 steps:
-  - name: node:18.12.1
-    entrypoint: npm
-    args: ['install']
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'gcr.io/gothic-venture-373811/granqvist-dev-docker-container',
+        '--build-arg',
+        'NODE_ENV=$_NODE_ENV',
+        '--build-arg',
+        'GITHUB_ACCESS_TOKEN=$_GITHUB_ACCESS_TOKEN',
+        '.',
+      ]
 
-  - name: node:18.12.1
-    entrypoint: npm
-    args: ['run', 'build']
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'gcr.io/gothic-venture-373811/granqvist-dev-docker-container']
 
-  - name: node:18.12.1
-    entrypoint: npm
-    args: ['run', 'create-env']
-    env:
-      - 'GITHUB_ACCESS_TOKEN=$_GITHUB_ACCESS_TOKEN'
-      - 'ENVIRONMENT=$_ENVIRONMENT'
-
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy']
-
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy', 'dispatch.yaml']
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      [
+        'run',
+        'deploy',
+        'granqvist-dev',
+        '--image',
+        'gcr.io/gothic-venture-373811/granqvist-dev-docker-container',
+        '--region',
+        'europe-west1',
+        '--allow-unauthenticated',
+        '--max-instances',
+        '30',
+        '--min-instances',
+        '0',
+        '--memory',
+        '128Mi',
+        '--concurrency',
+        '80',
+      ]
+images:
+  - gcr.io/gothic-venture-373811/granqvist-dev-docker-container
