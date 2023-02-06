@@ -15,7 +15,7 @@ const requestHandler = async (_: express.Request, res: express.Response) => {
 
 const app = express();
 
-if (process.env.ENVIRONMENT !== 'development') {
+if (process.env.NODE_ENV !== 'development') {
   app.disable('x-powered-by');
 
   const rateLimiter = rateLimit({
