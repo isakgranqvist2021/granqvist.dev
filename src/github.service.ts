@@ -36,7 +36,8 @@ export namespace GithubService {
         language: repository.language.replaceAll('#', '%23').toLowerCase(),
         pushed_at: new Date(repository.pushed_at).toLocaleDateString(),
       };
-    } catch {
+    } catch (err) {
+      console.error(`repository: ${repository}`, err);
       return null;
     }
   };
