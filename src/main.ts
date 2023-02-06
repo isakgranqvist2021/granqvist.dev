@@ -4,6 +4,11 @@ import 'dotenv/config';
 import express from 'express';
 import rateLimit from 'express-rate-limit';
 
+console.log({
+  NODE_ENV: process.env.NODE_ENV,
+  GITHUB_ACCESS_TOKEN: process.env.GITHUB_ACCESS_TOKEN,
+});
+
 const requestHandler = async (_: express.Request, res: express.Response) => {
   try {
     const repositories = await GithubService.getRepositoriesFromGithub();
