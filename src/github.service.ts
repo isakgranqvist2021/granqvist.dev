@@ -58,7 +58,8 @@ export namespace GithubService {
 
       cache = new Set(res.data.map(repositoryMapper).filter(isNotNull));
       return Array.from(cache);
-    } catch {
+    } catch (err) {
+      console.error(err);
       return null;
     }
   };
