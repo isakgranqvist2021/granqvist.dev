@@ -11,6 +11,7 @@ ENV GITHUB_ACCESS_TOKEN=$GITHUB_ACCESS_TOKEN
 COPY public public
 COPY src src
 COPY views views
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY package-lock.json .
 COPY package.json .
 COPY tsconfig.json .
