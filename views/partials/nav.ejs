@@ -1,28 +1,59 @@
-<nav>
-  <div class="container">
-    <a href="#home" aria-label="Go to the top of the page">
-      <img
-        class="logo"
-        aria-label="granqvist.dev company logo"
-        src="/public/images/svg/logo.svg"
-        alt="Isak Granqvist Logo"
-      />
-    </a>
-    <div class="nav-links">
-      <a href="#home" onclick="closeNav()">home</a>
-      <a href="#solutions" onclick="closeNav()">solutions</a>
-      <a href="#technology" onclick="closeNav()">technology</a>
-      <a href="#about" onclick="closeNav()">about</a>
-      <a href="#projects" onclick="closeNav()">projects</a>
-      <a href="#contact" onclick="closeNav()">contact</a>
-    </div>
+<div class="bars">
+  <div class="bars-line"></div>
+  <div class="bars-line"></div>
+  <div class="bars-line"></div>
+</div>
 
-    <div class="bars" onclick="toggleNav()">
-      <div class="bars-line"></div>
-      <div class="bars-line"></div>
-      <div class="bars-line"></div>
-    </div>
+<nav>
+  <div class="nav-content">
+    <a href="#home">home</a>
+    <a href="#solutions">solutions</a>
+    <a href="#technology">technology</a>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
   </div>
 
-  <div class="backdrop" onclick="closeNav()"></div>
+  <div class="social">
+    <div class="social-icons">
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.instagram.com/isakgranqvist2021/"
+        title="Instagram"
+      >
+        <img
+          src="/public/images/svg/instagram.svg"
+          alt="Instagram Icon"
+          loading="lazy"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.linkedin.com/in/isak-granqvist-b1217a207/"
+        title="Linkedin"
+      >
+        <img
+          src="/public/images/svg/linkedin.svg"
+          alt="Linkedin Icon"
+          loading="lazy"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/isakgranqvist2021"
+        title="Github"
+      >
+        <img
+          src="/public/images/svg/github.svg"
+          alt="Github Icon"
+          loading="lazy"
+        />
+      </a>
+    </div>
+  </div>
 </nav>
+
+<div class="nav-animation"></div>

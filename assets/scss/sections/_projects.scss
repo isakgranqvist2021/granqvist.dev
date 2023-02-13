@@ -5,7 +5,7 @@
 }
 
 #projects h2 {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   text-transform: capitalize;
 }
 
@@ -31,10 +31,6 @@
 
 #projects .grid-item-body {
   padding: 1.3rem;
-}
-
-#projects .grid-item:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
 }
 
 #projects .grid-item .media {
