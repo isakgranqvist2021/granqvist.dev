@@ -1,95 +1,71 @@
-function gtag() {
-  dataLayer.push(arguments);
-}
+const bars = document.querySelector('.bars');
+const nav = document.querySelector('nav');
+const navAnimation = document.querySelector('.nav-animation');
+const navContent = document.querySelector('.nav-content');
+const navLinks = document.querySelectorAll('nav a');
+const cardIcons = document.querySelectorAll('.card-icon');
 
-window.dataLayer = window.dataLayer || [];
+let funMode = false;
 
-gtag('js', new Date());
-gtag('config', 'G-SFK4JQRKBG');
-
-function toggleNav() {
-  const barLines = document.querySelectorAll('.bars-line');
-  const nav = document.querySelector('nav');
-  const navAnimation = document.querySelector('.nav-animation');
-
-  const isOpen = nav.classList.contains('open');
-
-  if (isOpen) {
-    document.body.style.overflow = 'auto';
-  } else {
-    document.body.style.overflow = 'hidden';
-  }
-
-  if (isOpen) {
-    nav.classList.remove('open');
-    navAnimation.classList.remove('open');
-    barLines.forEach((line) => {
-      line.classList.remove('open');
-    });
-  } else {
-    nav.classList.add('open');
-    navAnimation.classList.add('open');
-    barLines.forEach((line) => {
-      line.classList.add('open');
-    });
-  }
-}
-
-function closeNav() {
-  const nav = document.querySelector('nav');
-  const navAnimation = document.querySelector('.nav-animation');
-  const barLines = document.querySelectorAll('.bars-line');
-
-  nav.classList.remove('open');
-  navAnimation.classList.remove('open');
-  barLines.forEach((line) => {
-    line.classList.remove('open');
-  });
-}
-
-const swiper = new Swiper('.swiper', {
+const swiperOptions = {
+  breakpoints: {
+    680: { slidesPerView: 2, spaceBetween: 30 },
+    1200: { slidesPerView: 3, spaceBetween: 40 },
+    1480: { slidesPerView: 4, spaceBetween: 40 },
+  },
   loop: true,
-
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  pagination: { el: '.swiper-pagination', clickable: true },
   slidesPerView: 1,
   spaceBetween: 10,
-  breakpoints: {
-    680: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    1480: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-  },
+};
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
+function initFunMode() {
+  funMode = true;
+  document.body.classList.remove('pre-load');
+}
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+function init() {
+  const close = () => {
+    document.body.style.overflowY = 'auto';
+    nav.classList.remove('open');
+    navAnimation.classList.remove('open');
+    bars.classList.remove('open');
+    navContent.classList.remove('open');
+  };
 
-window.addEventListener('DOMContentLoaded', () => {
-  const bars = document.querySelector('.bars');
-  bars.addEventListener('click', toggleNav);
+  const open = () => {
+    document.body.style.overflowY = 'hidden';
 
-  const navLinks = document.querySelectorAll('nav a');
-  navLinks.forEach((link) => {
-    link.addEventListener('click', closeNav);
-  });
+    nav.classList.add('open');
+    navAnimation.classList.add('open');
+    bars.classList.add('open');
+    navContent.classList.add('open');
+  };
+
+  const toggle = () => {
+    const isOpen = nav.classList.contains('open');
+    isOpen ? close() : open();
+  };
 
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      toggleNav();
-    }
+    if (e.key !== 'Escape') return;
+    toggle();
   });
+
+  bars.addEventListener('click', toggle);
+  navLinks.forEach((link) => link.addEventListener('click', close));
+
+  cardIcons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      !funMode && initFunMode();
+      document.body.classList.toggle('barrel-roll');
+    });
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  init();
+
+  new Swiper('.swiper', swiperOptions);
 });

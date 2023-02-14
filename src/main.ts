@@ -34,6 +34,10 @@ app.set('view engine', '.ejs');
 
 app.all('*', requestHandler);
 
-app.listen(process.env.PORT || 8080, () =>
-  console.log(`app listening on ${process.env.PORT || 8080}`)
-);
+app.listen(process.env.PORT || 8080, () => {
+  if (process.env.NODE_ENV === 'development') {
+    console.log(
+      `Server started at http://localhost:${process.env.PORT || 8080}`
+    );
+  }
+});

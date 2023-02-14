@@ -4,6 +4,34 @@
 @import './partials/partials';
 @import './sections/sections';
 
+@keyframes barrel-roll {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  66% {
+    transform: rotate(180deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes barrel-roll-reverse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  66% {
+    transform: rotate(-180deg) scale(0.5);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +46,16 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  animation: barrel-roll-reverse 1s ease-in-out;
+}
+
+body.pre-load {
+  animation: none !important;
+}
+
+body.barrel-roll {
+  animation: barrel-roll 1s ease-in-out;
 }
 
 ::-webkit-scrollbar {
