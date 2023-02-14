@@ -22,11 +22,7 @@
   border-radius: 4px;
   text-decoration: none;
   transition: all 200ms ease !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.03);
-}
-
-#projects .grid-item:active {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 6px 6px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid rgb(240, 240, 240);
 }
 
 #projects .grid-item-body {
