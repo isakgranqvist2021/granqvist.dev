@@ -3,9 +3,6 @@ const nav = document.querySelector('nav');
 const navAnimation = document.querySelector('.nav-animation');
 const navContent = document.querySelector('.nav-content');
 const navLinks = document.querySelectorAll('nav a');
-const cardIcons = document.querySelectorAll('.card-icon');
-
-let funMode = false;
 
 const swiperOptions = {
   breakpoints: {
@@ -14,28 +11,30 @@ const swiperOptions = {
     1480: { slidesPerView: 4, spaceBetween: 40 },
   },
   loop: true,
-  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
   slidesPerView: 1,
   spaceBetween: 10,
 };
 
-function initFunMode() {
-  funMode = true;
-  document.body.classList.remove('pre-load');
-}
+window.addEventListener('DOMContentLoaded', () => {
+  const closeNav = () => {
+    document.body.classList.remove('overflow-hidden');
 
-function init() {
-  const close = () => {
-    document.body.style.overflowY = 'auto';
     nav.classList.remove('open');
     navAnimation.classList.remove('open');
     bars.classList.remove('open');
     navContent.classList.remove('open');
   };
 
-  const open = () => {
-    document.body.style.overflowY = 'hidden';
+  const openNav = () => {
+    document.body.classList.add('overflow-hidden');
 
     nav.classList.add('open');
     navAnimation.classList.add('open');
@@ -43,29 +42,18 @@ function init() {
     navContent.classList.add('open');
   };
 
-  const toggle = () => {
-    const isOpen = nav.classList.contains('open');
-    isOpen ? close() : open();
+  const toggleNav = () => {
+    nav.classList.contains('open') ? closeNav() : openNav();
   };
 
   window.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    toggle();
+
+    toggleNav();
   });
 
-  bars.addEventListener('click', toggle);
-  navLinks.forEach((link) => link.addEventListener('click', close));
-
-  cardIcons.forEach((icon) => {
-    icon.addEventListener('click', () => {
-      !funMode && initFunMode();
-      document.body.classList.toggle('barrel-roll');
-    });
-  });
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  init();
+  bars.addEventListener('click', toggleNav);
+  navLinks.forEach((link) => link.addEventListener('click', closeNav));
 
   new Swiper('.swiper', swiperOptions);
 });
