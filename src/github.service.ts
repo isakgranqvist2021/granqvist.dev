@@ -12,7 +12,7 @@ interface Repository {
 }
 
 const include = new Set([
-  1054371510, 472047527, 355564116, 515361424, 1051755430,
+  1054371510, 472047527, 355564116, 515361424, 1051755430, 595464105,
 ]);
 
 const isNotNull = (repository: object | null): repository is object => {
@@ -55,6 +55,9 @@ export namespace GithubService {
         },
       });
 
+      console.log(
+        res.data.map((repo: any) => ({ id: repo.id, name: repo.name }))
+      );
       cache = new Set(res.data.map(repositoryMapper).filter(isNotNull));
       return Array.from(cache);
     } catch (err) {

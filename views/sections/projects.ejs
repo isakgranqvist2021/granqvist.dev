@@ -9,8 +9,9 @@
         <a
           class="swiper-slide grid-item"
           title="View repository"
-          href="<%= repository.html_url %>"
+          href="<%= repository.homepage || repository.html_url %>"
           role="gridcell"
+          target="_blank"
         >
           <img
             class="media"
