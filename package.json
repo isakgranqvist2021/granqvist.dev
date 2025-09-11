@@ -2,7 +2,7 @@
   "name": "granqvist.dev",
   "version": "1.0.1",
   "description": "granqivst.dev",
-  "main": "main.js",
+  "main": "index.js",
   "author": "Isak Granqvist",
   "license": "MIT",
   "scripts": {
