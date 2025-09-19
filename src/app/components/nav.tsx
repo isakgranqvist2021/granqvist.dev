@@ -38,6 +38,59 @@ export function Nav() {
     });
   }, [toggleNav]);
 
+  React.useEffect(() => {
+    const lines = Array.from(
+      document.querySelectorAll<HTMLElement>('.bars-line')
+    );
+    if (!lines.length) return;
+
+    const THEME_SEL = '.bg-dark, .bg-light';
+
+    const pickThemeAt = (x: number, y: number) => {
+      const stack =
+        (document.elementsFromPoint?.(x, y) as HTMLElement[]) ??
+        [document.elementFromPoint(x, y) as HTMLElement | null].filter(Boolean);
+
+      for (const el of stack) {
+        const themed = el.closest<HTMLElement>(THEME_SEL);
+        if (themed) {
+          return themed.classList.contains('bg-dark') ? 'dark' : 'light';
+        }
+      }
+      return null;
+    };
+
+    const updateOne = (line: HTMLElement) => {
+      const r = line.getBoundingClientRect();
+      const theme = pickThemeAt(r.left + r.width / 2, r.top + r.height / 2);
+
+      line.classList.toggle('light', theme === 'dark');
+    };
+
+    let ticking = false;
+    const updateAll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        lines.forEach(updateOne);
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', updateAll, { passive: true });
+    window.addEventListener('resize', updateAll);
+
+    const io = new IntersectionObserver(updateAll, { threshold: [0, 0.5, 1] });
+    document.querySelectorAll(THEME_SEL).forEach((s) => io.observe(s));
+
+    updateAll();
+
+    return () => {
+      window.removeEventListener('scroll', updateAll);
+      window.removeEventListener('resize', updateAll);
+      io.disconnect();
+    };
+  }, []);
+
   return (
     <React.Fragment>
       <div ref={barsRef} className="bars" onClick={toggleNav}>
@@ -100,6 +153,10 @@ export function Nav() {
             </a>
           </div>
         </div>
+
+        <a href="mailto:contact@granqvist.dev" className="email-text">
+          contact@granqvist.dev
+        </a>
       </nav>
 
       <div ref={navAnimationRef} className="nav-animation"></div>

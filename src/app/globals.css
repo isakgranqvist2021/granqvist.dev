@@ -1,52 +1,5 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap';
 
-button,
-.button {
-  border-width: 1px;
-  border-style: solid;
-  padding: 0.8rem 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 700;
-  letter-spacing: 1.1px;
-  font-family: 'Arial';
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-  min-width: 100px;
-  background-color: #154eb8;
-  border-color: #154eb8;
-  color: #fff;
-  text-decoration: none !important;
-  border-radius: 4px;
-}
-
-button:hover,
-.button:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: #154eb8;
-}
-
-button.outlined,
-.button.outlined {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #154eb8;
-  color: #154eb8;
-}
-
-button.outlined:hover,
-.button.outlined:hover {
-  background-color: #154eb8;
-  color: #fff;
-}
-
-@media (max-width: 600px) {
-  button,
-  .button {
-    width: 100%;
-  }
-}
-
 .container {
   width: 75%;
   margin: 0 auto;
@@ -207,7 +160,8 @@ h3 {
 }
 
 .nav-animation {
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.97);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,17 +282,20 @@ nav .social {
   top: 50px;
   width: 45px;
   z-index: 6;
-  z-index: 6;
 }
 
 .bars .bars-line {
   height: 3px;
   cursor: pointer;
   width: 100%;
-  background-color: #2b2b2b;
-  transition-property: all;
+  transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.6, -0.4, 0.735, 0.045);
+  background-color: #2b2b2b;
+}
+
+.bars-line.light {
+  background-color: #fff;
 }
 
 .bars :nth-of-type(1) {

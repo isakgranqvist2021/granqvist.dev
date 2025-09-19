@@ -1,6 +1,6 @@
 export function Technology() {
   return (
-    <section id="technology" tabIndex={2}>
+    <section id="technology" className="bg-light" tabIndex={2}>
       <div className="container">
         <div className="grid" role="grid">
           <div

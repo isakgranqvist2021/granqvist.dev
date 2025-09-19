@@ -11,7 +11,7 @@ export function Home() {
           <p className="subtitle1">
             With a focus on building professional-grade software, I offer
             services ranging from web application development to desktop
-            application creation to server software development. Feel free to
+            application creation to server software development. Feel free to{' '}
             <a href="#contact">contact me</a> for more details.
           </p>
         </div>
