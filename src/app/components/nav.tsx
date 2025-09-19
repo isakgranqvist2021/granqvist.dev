@@ -8,27 +8,27 @@ export function Nav() {
   const barsRef = React.useRef<HTMLDivElement>(null);
   const navContentRef = React.useRef<HTMLDivElement>(null);
 
-  const closeNav = () => {
+  const closeNav = React.useCallback(() => {
     document.body.classList.remove('overflow-hidden');
 
     navRef.current?.classList.remove('open');
     navAnimationRef.current?.classList.remove('open');
     barsRef.current?.classList.remove('open');
     navContentRef.current?.classList.remove('open');
-  };
+  }, []);
 
-  const openNav = () => {
+  const openNav = React.useCallback(() => {
     document.body.classList.add('overflow-hidden');
 
     navRef.current?.classList.add('open');
     navAnimationRef.current?.classList.add('open');
     barsRef.current?.classList.add('open');
     navContentRef.current?.classList.add('open');
-  };
+  }, []);
 
-  const toggleNav = () => {
+  const toggleNav = React.useCallback(() => {
     navRef.current?.classList.contains('open') ? closeNav() : openNav();
-  };
+  }, [closeNav, openNav]);
 
   React.useEffect(() => {
     window.addEventListener('keydown', (e) => {
@@ -36,7 +36,7 @@ export function Nav() {
 
       toggleNav();
     });
-  }, []);
+  }, [toggleNav]);
 
   return (
     <React.Fragment>

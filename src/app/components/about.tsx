@@ -11,7 +11,7 @@ export function About() {
           <p className="body1">
             I specialize in delivering custom software and applications tailored
             to the specific needs of businesses, with a focus on web and server
-            applications. Let's work together to bring your project to life.
+            applications. Let{`'`}s work together to bring your project to life.
           </p>
         </div>
         <div className="flex-item">
