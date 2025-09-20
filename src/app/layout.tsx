@@ -3,6 +3,8 @@ import './globals.css';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
+  metadataBase: process.env.URL ? new URL(process.env.URL) : undefined,
+
   title: 'Isak Granqvist - Full Stack Software Developer',
   description:
     'Full stack software developer. Visit my website to learn more about my skills and portfolio. If you need to get in touch with me, you can send an email to contact@granqvist.dev.',
