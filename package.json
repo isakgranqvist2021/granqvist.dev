@@ -12,7 +12,7 @@
     "@next/third-parties": "^15.5.3",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "axios": "^1.12.2",
-    "next": "^15.5.3",
+    "next": "^15.5.7",
     "prettier": "^3.6.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
